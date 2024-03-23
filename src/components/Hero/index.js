@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { motion } from 'framer-motion'
 
@@ -16,9 +18,31 @@ const textVariants = {
             staggerChildren: 0.1,
         },
     },
+    scrollButton: {
+        x: 0,
+        opacity: 1,
+        y: 10,
+        transition: {
+            duration: 2,
+            repeat: Infinity,
+        },
+    },
+}
+const sliderVariants = {
+    initial: {
+        x: 0,
+    },
+    animate: {
+        x: '-220%',
+        transition: {
+            repeat: Infinity,
+            repeatType: 'mirror',
+            duration: 20,
+        },
+    },
 }
 
-const Hero = () => {
+function Hero() {
     return (
         <div className="hero">
             <div className="wrapper">
@@ -42,14 +66,20 @@ const Hero = () => {
                     </motion.div>
                     <motion.img
                         variants={textVariants}
+                        animate="scrollButton"
                         src="/scroll.png"
                         alt=""
                     ></motion.img>
                 </motion.div>
             </div>
-            <div className="slidingTextContainer">
+            <motion.div
+                className="slidingTextContainer"
+                variants={sliderVariants}
+                initial="initial"
+                animate="animate"
+            >
                 Writer Content Creator Influencer
-            </div>
+            </motion.div>
             <div className="imageContainer">
                 <img src="/hero.png" alt="bonne tete de vainqueur"></img>
             </div>

@@ -35,7 +35,7 @@ function Sidebar() {
         >
             {/* background */}
             <motion.div
-                className="background fixed top-0 left-0 bottom-0 w-96 bg-white text-black"
+                className="background z-50 fixed top-0 left-0 bottom-0 w-96 bg-white text-black"
                 variants={variants}
             >
                 <Links />
