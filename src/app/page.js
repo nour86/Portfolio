@@ -3,6 +3,7 @@ import Section from '@/components/Section'
 import Test from '@/components/Test'
 import Hero from '@/components/Hero'
 import Parallax from '@/components/Parallax'
+import Services from '@/components/Services'
 
 export default function Home() {
     return (
@@ -13,6 +14,9 @@ export default function Home() {
             </Section>
             <Section id="Services">
                 <Parallax type="services" />
+            </Section>
+            <Section>
+                <Services />
             </Section>
             <Section id="About">About</Section>
             <Section id="Technologies">Technologies</Section>
