@@ -33,7 +33,6 @@ const variants = {
 
 const Diaporama = ({ pictures }) => {
     const images = pictures
-    console.log(images[0].img)
 
     const [index, setIndex] = useState(0)
     const [direction, setDirection] = useState(0)
@@ -64,8 +63,8 @@ const Diaporama = ({ pictures }) => {
     }, [index])
 
     return (
-        <div className=" relative h-full w-1/3 flex  p-7 items-center object-cover overflow-hidden bg-red-500">
-            <div className="w-full h-2/3 m-0 p-0 flex items-center object-contain relative overflow-hidden rounded-2xl">
+        <>
+            <div className="w-full aspect-[1/2] flex-1 m-0 p-0 flex items-center justify-center object-cover relative overflow-hidden rounded-2xl">
                 <AnimatePresence initial={false} custom={direction}>
                     <motion.img
                         variants={variants}
@@ -74,7 +73,7 @@ const Diaporama = ({ pictures }) => {
                         exit="exit"
                         src={images[index].img}
                         alt="slides"
-                        className="absolute top-0 left-0 w-full h-full object-cover object-center"
+                        className="absolute top-0 h-full object-cover rounded-xl"
                         key={index}
                         custom={direction}
                     />
@@ -96,7 +95,7 @@ const Diaporama = ({ pictures }) => {
             >
                 ▶
             </motion.button>
-        </div>
+        </>
     )
 }
 export default Diaporama

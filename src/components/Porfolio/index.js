@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useRef } from 'react'
-import Project from './Project'
+import Project from './Project/index'
 
 import { motion, useScroll, useSpring } from 'framer-motion'
 
@@ -9,19 +9,10 @@ const items = [
     {
         id: 1,
         title: 'Kaza',
-        img: 'https://picsum.photos/536/354',
-        description:
-            'Lorem ipsum dolor sit amet consectetur, adipisicingelit. Ad repellendus ipsum hic voluptatibus undequibusdam aspernatur cumque doloremque incidunt. Quiasaepe unde rerum ea tempore consequuntur quis inciduntullam reiciendis!',
-        diapo: [
-            { title: 'a', img: './sites/pictures/booki/booki2.webp' },
-            { title: 'b', img: './sites/pictures/booki/booki3.webp' },
-            { title: 'c', img: './sites/pictures/booki/booki4.webp' },
-        ],
-    },
-    {
-        id: 2,
-        title: 'Booki',
-        img: 'https://picsum.photos/id/237/536/354',
+        logo: './sites/pictures/kasa/kasa_logo.svg',
+        subtitle: 'lorem ipsum',
+        technos: ['html5', 'css3', 'javascript'],
+        cover: 'https://picsum.photos/536/354',
         description:
             'Lorem ipsum dolor sit amet consectetur, adipisicingelit. Ad repellendus ipsum hic voluptatibus undequibusdam aspernatur cumque doloremque incidunt. Quiasaepe unde rerum ea tempore consequuntur quis inciduntullam reiciendis!',
         diapo: [
@@ -29,17 +20,37 @@ const items = [
             { title: 'b', img: './sites/pictures/kasa/kasa3.webp' },
             { title: 'c', img: './sites/pictures/kasa/kasa4.webp' },
         ],
+        url: './github/emlez.com',
+        repo: './github/ernerz.com',
     },
     {
-        id: 3,
-        title: 'Nina',
-        img: 'https://picsum.photos/seed/picsum/536/354',
+        id: 2,
+        title: 'Booki',
+        logo: './sites/pictures/booki/booki_logo.svg',
+        subtitle: 'lorem ipsum',
+        technos: ['html5', 'css3', 'javascript'],
+        cover: 'https://picsum.photos/id/237/536/354',
         description:
             'Lorem ipsum dolor sit amet consectetur, adipisicingelit. Ad repellendus ipsum hic voluptatibus undequibusdam aspernatur cumque doloremque incidunt. Quiasaepe unde rerum ea tempore consequuntur quis inciduntullam reiciendis!',
         diapo: [
+            { title: 'z', img: './sites/pictures/booki/booki1.webp' },
             { title: 'a', img: './sites/pictures/booki/booki2.webp' },
             { title: 'b', img: './sites/pictures/booki/booki3.webp' },
-            { title: 'c', img: './sites/pictures/booki/booki4.webp' },
+        ],
+    },
+    {
+        id: 3,
+        title: 'Oh My Food',
+        logo: './sites/pictures/ohmyfood/ohmyfood_logo.svg',
+        subtitle: 'lorem ipsum',
+        technos: ['html5', 'css3', 'javascript'],
+        cover: 'https://picsum.photos/seed/picsum/536/354',
+        description:
+            'Lorem ipsum dolor sit amet consectetur, adipisicingelit. Ad repellendus ipsum hic voluptatibus undequibusdam aspernatur cumque doloremque incidunt. Quiasaepe unde rerum ea tempore consequuntur quis inciduntullam reiciendis!',
+        diapo: [
+            { title: 'a', img: './sites/pictures/ohMyFood/ohmyfood2.webp' },
+            { title: 'b', img: './sites/pictures/ohMyFood/ohmyfood3.webp' },
+            { title: 'c', img: './sites/pictures/ohMyFood/ohmyfood4.webp' },
         ],
     },
 ]
@@ -62,7 +73,7 @@ const Portfolio = () => {
                     className=" h-1.5 bg-white border-none rounded-full mt-2"
                 ></motion.div>
             </div>
-            {items.map((item) => (
+            {items.map((item, index) => (
                 <Project project={item} key={item.id} />
             ))}
         </div>

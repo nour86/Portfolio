@@ -7,14 +7,14 @@ import ToggleButton from './toggleButton'
 
 const variants = {
     open: {
-        clipPath: 'circle(1200px at 50px 50px)',
+        clipPath: 'circle(1200px at 3rem 3rem)',
         transition: {
             type: 'spring',
             stiffness: '20',
         },
     },
     closed: {
-        clipPath: 'circle(30px at 50px 50px)',
+        clipPath: 'circle(2rem at 3rem 3rem)',
         transition: {
             delay: 0.5,
             type: 'spring',
@@ -35,7 +35,7 @@ function Sidebar() {
         >
             {/* background */}
             <motion.div
-                className=" z-50 fixed top-0 left-0 bottom-0 w-96 bg-white text-black"
+                className=" z-20 fixed top-0 left-0 bottom-0 w-96 bg-white text-black"
                 variants={variants}
             >
                 <Links />

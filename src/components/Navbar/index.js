@@ -6,7 +6,7 @@ import Sidebar from '../Sidebar'
 
 function Navbar() {
     return (
-        <div className="header h-24 flex justify-between">
+        <div className="h-24 flex justify-between">
             <Sidebar />
             <div className=" w-full max-w-7xl m-auto px-40 flex flex-row items-center justify-between h-full">
                 <motion.span
