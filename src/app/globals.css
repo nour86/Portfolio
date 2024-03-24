@@ -28,11 +28,12 @@
     box-sizing: border-box;
 }
 html {
-    /* scroll-snap-type: y mandatory; */
+    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
 body {
     color: lightgray;
     background-color: #0c0c1d;
+    overflow-x: hidden;
 }

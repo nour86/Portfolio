@@ -30,12 +30,12 @@ function Sidebar() {
     return (
         // sidebar
         <motion.div
-            className="sidebar flex flex-col items-center justify-center bg-white text-black"
+            className=" flex flex-col items-center justify-center bg-white text-black"
             animate={open ? 'open' : 'closed'}
         >
             {/* background */}
             <motion.div
-                className="background z-50 fixed top-0 left-0 bottom-0 w-96 bg-white text-black"
+                className=" z-50 fixed top-0 left-0 bottom-0 w-96 bg-white text-black"
                 variants={variants}
             >
                 <Links />

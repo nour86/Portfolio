@@ -1,6 +1,6 @@
-function Section({ id, children }) {
+function Section({ id, children, ref }) {
     return (
-        <section className=" h-screen snap-center" id={id}>
+        <section className=" h-screen w-full snap-center" id={id} ref={ref}>
             {children}
         </section>
     )
