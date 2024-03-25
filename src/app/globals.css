@@ -36,4 +36,7 @@ body {
     color: lightgray;
     background-color: #0c0c1d;
     overflow-x: hidden;
+    @screen lg {
+        font-size: 24px;
+    }
 }

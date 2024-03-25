@@ -5,6 +5,9 @@ import Hero from '@/components/Hero'
 import Parallax from '@/components/Parallax'
 import Services from '@/components/Services'
 import Portfolio from '@/components/Porfolio'
+import Kasa from '@/content/Kasa'
+import Booki from '@/content/Booki'
+import Ohmyfood from '@/content/OhmyFood'
 
 export default function Home() {
     return (
@@ -13,16 +16,21 @@ export default function Home() {
                 <Navbar />
                 <Hero />
             </Section>
-            <Section id="Services">
+            {/* <Section id="Services">
                 <Parallax type="services" />
             </Section>
             <Section>
                 <Services />
-            </Section>
+            </Section> */}
             <Section id="Portfolio">
                 <Parallax type="portfolio" />
             </Section>
-            <Portfolio />
+
+            <Portfolio>
+                <Kasa />
+                <Booki />
+                <Ohmyfood />
+            </Portfolio>
             <Section id="About">About</Section>
             <Section id="Technologies">Technologies</Section>
             <Section id="Contact">

@@ -12,6 +12,10 @@ module.exports = {
                 'gradient-conic':
                     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
             },
+            fontSize: {
+                clamp4xl: 'clamp(2rem, 10vw, 6rem)',
+                clamp2xl: 'clamp(1rem, 5vw, 3rem)',
+            },
         },
     },
     plugins: [],

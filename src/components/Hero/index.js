@@ -45,7 +45,7 @@ function Hero() {
         <div className=" h-[calc(100vh-100px)] overflow-hidden relative bg-gradient-to-b from-slate-950 to-slate-800">
             <div className="max-w-7xl m-auto h-full">
                 <motion.div
-                    className=" h-full w-1/2 flex flex-col justify-center gap-8 "
+                    className=" h-full w-3/4 flex flex-col justify-center gap-8 "
                     variants={textVariants}
                     initial="initial"
                     animate="animate"
@@ -57,7 +57,7 @@ function Hero() {
                         Nour Alchami
                     </motion.h2>
                     <motion.h1 variants={textVariants} className="text-8xl">
-                        Developer and designer
+                        Developpeur web & intégrateur
                     </motion.h1>
                     <motion.div variants={textVariants} className="flex gap-5">
                         <motion.button
@@ -88,7 +88,7 @@ function Hero() {
                 initial="initial"
                 animate="animate"
             >
-                Writer Content Creator Influencer
+                Writer Content Creator
             </motion.div>
             <div className="imageContainer">
                 {/* <img src="/hero.png" className="h-full absolute top-0 right-0" alt="bonne tete de vainqueur"></img> */}

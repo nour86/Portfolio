@@ -55,7 +55,7 @@ const items = [
     },
 ]
 
-const Portfolio = () => {
+const Portfolio = ({ children }) => {
     const ref = useRef()
 
     const { scrollYProgress } = useScroll({
@@ -73,9 +73,7 @@ const Portfolio = () => {
                     className=" h-1.5 bg-white border-none rounded-full mt-2"
                 ></motion.div>
             </div>
-            {items.map((item, index) => (
-                <Project project={item} key={item.id} />
-            ))}
+            {children}
         </div>
     )
 }
