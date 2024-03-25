@@ -34,7 +34,7 @@ const Booki = () => {
                         Booki est un site Internet qui permet aux usagers de
                         trouver des hébergements et des activités dans la ville
                         de leur choix.
-                        <br /> L'objectif est d'intégrer l'interface du site
+                        <br /> L'objectif est d intégrer l interface du site
                         avec du code HTML et CSS, à partir de maquettes Figma.
                     </p>
                 </div>
