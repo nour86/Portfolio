@@ -70,12 +70,12 @@ const Project = ({ project, children }) => {
                     duration: 0.5,
                 }}
                 exit={{ opacity: 0, x: '-100%' }}
-                className=" flex items-center flex-1 justify-center self-end w-full bg-green-500 h-5/6"
+                className=" flex items-center flex-1 justify-center self-end w-full h-5/6"
             >
-                <div className="w-full md:w-3/4 max-w-screen-xl flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-8 h-full bg-slate-400 overflow-hidden ">
+                <div className="w-full md:w-3/4 max-w-screen-xl flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-8 h-fulloverflow-hidden ">
                     {/* imageContainer */}
-                    <div className=" relative flex flex-1 md:flex-2 h-full items-center object-cover bg-red-400">
-                        <div className="bg-yellow-500 p-4">
+                    <div className=" relative flex flex-1 md:flex-2 h-full items-center object-cover">
+                        <div className=" p-4">
                             <img
                                 src={project.cover}
                                 alt=""
@@ -84,7 +84,7 @@ const Project = ({ project, children }) => {
                         </div>
                     </div>
                     {/* text container */}
-                    <div className="flex flex-1 h-full max-w-screen-md justify-start items-start lg:items-center  bg-blue-700">
+                    <div className="flex flex-1 h-full max-w-screen-md justify-start items-start lg:items-center ">
                         <motion.div
                             className="flex-1 flex flex-col gap-4 justify-center lg:items-start overflow-none"
                             style={{ y }}
@@ -92,7 +92,7 @@ const Project = ({ project, children }) => {
                             <h3 className="text-gray-500 text-4xl text-center lg:text-start">
                                 {project.title}
                             </h3>
-                            <div className="px-2 bg-red-400 max-w-md ">
+                            <div className="px-2  max-w-md ">
                                 <p>{project.description}</p>
                             </div>
                             <button
@@ -118,10 +118,10 @@ const Project = ({ project, children }) => {
                     duration: 0.5,
                 }}
                 exit={{ opacity: 0, scale: 0, x: '100%' }}
-                className="relative flex items-center flex-1 justify-center self-end w-full h-5/6 bg-green-800"
+                className="relative flex items-center flex-1 justify-center self-end w-full h-5/6 "
             >
-                <motion.div className="w-full h-full md:w-5/6 max-w-screen-xl grid grid-cols-4 bg-red-900">
-                    <div className=" col-span-5 row-span-2 md:col-span-2 md:row-span-3   bg-purple-400">
+                <motion.div className="w-full h-full md:w-5/6 max-w-screen-xl grid grid-cols-10 gap-x-3 ">
+                    <div className=" col-span-10 row-span-2 md:col-span-6 md:row-span-3 lg:col-span-5 lg:row-span-3   ">
                         <img
                             src={project.cover}
                             alt=""
@@ -129,11 +129,11 @@ const Project = ({ project, children }) => {
                         />
                     </div>
 
-                    <motion.div className="col-span-5 row-span-2 md:col-span-2 md:row-span-5  bg-blue-400">
+                    <motion.div className="col-span-10 row-span-2 md:col-span-4 md:row-span-5 lg:col-span-5 lg:row-span-5  ">
                         {children}
                     </motion.div>
 
-                    <div className="col-span-5 row-span-1 md:col-span-2 md:row-span-2  bg-slate-400">
+                    <div className="col-span-10 row-span-1 md:col-span-6 md:row-span-2 lg:col-span-5 lg:row-span-2  ">
                         <div className="flex flex-col h-full justify-evenly items-center">
                             {project.website && (
                                 <Link

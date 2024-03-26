@@ -8,6 +8,7 @@ import Portfolio from '@/components/Porfolio'
 import Kasa from '@/content/Kasa'
 import Booki from '@/content/Booki'
 import Ohmyfood from '@/content/OhmyFood'
+import Contact from '@/components/Contact'
 
 export default function Home() {
     return (
@@ -34,6 +35,7 @@ export default function Home() {
             <Section id="About">About</Section>
             <Section id="Technologies">Technologies</Section>
             <Section id="Contact">
+                <Contact />
                 <Test />
             </Section>
         </div>

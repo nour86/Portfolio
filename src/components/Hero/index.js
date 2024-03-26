@@ -46,19 +46,24 @@ function Hero() {
         <div className=" h-[calc(100vh-100px)] overflow-hidden relative bg-gradient-to-b from-slate-950 to-slate-800">
             <div className="max-w-7xl m-auto h-full">
                 <motion.div
-                    className=" h-full w-3/4 flex flex-col justify-center gap-8 "
+                    className=" p-4 h-full w-full items-center flex flex-col justify-center gap- "
                     variants={textVariants}
                     initial="initial"
                     animate="animate"
                 >
                     <motion.h2
                         variants={textVariants}
-                        className=" text-4xl text-purple-950 tracking-[0.5rem]"
+                        className=" text-4xl text-purple-950 tracking-[0.5rem] m-9"
                     >
                         Nour Alchami
                     </motion.h2>
-                    <motion.h1 variants={textVariants} className="text-8xl">
-                        Developpeur web & intégrateur
+                    <motion.h1
+                        variants={textVariants}
+                        className="text-4xl sm:text-8xl m-4 sm:text-center"
+                    >
+                        Developpeur web <br className="hidden sm:visible" /> &{' '}
+                        <br className="hidden sm:visible" />
+                        intégrateur
                     </motion.h1>
                     <motion.div variants={textVariants} className="flex gap-5">
                         <motion.button
@@ -77,7 +82,7 @@ function Hero() {
                     <motion.img
                         variants={textVariants}
                         animate="scrollButton"
-                        className=" w-12"
+                        className=" w-12 mt-12"
                         src="/scroll.png"
                         alt=""
                     ></motion.img>
@@ -91,9 +96,6 @@ function Hero() {
             >
                 Writer Content Creator
             </motion.div>
-            <div className="imageContainer">
-                {/* <img src="/hero.png" className="h-full absolute top-0 right-0" alt="bonne tete de vainqueur"></img> */}
-            </div>
         </div>
     )
 }

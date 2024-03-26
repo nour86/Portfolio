@@ -6,17 +6,17 @@ import Sidebar from '../Sidebar'
 
 function Navbar() {
     return (
-        <div className="h-24 flex justify-between">
+        <div className="h-24 flex justify-end lg:justify-center ">
             <Sidebar />
-            <div className=" w-full max-w-7xl m-auto px-40 flex flex-row items-center justify-between h-full">
-                <motion.span
+            <div className=" w-3/4 flex flex-row items-center justify-between px-6 h-full">
+                <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
-                    className="name font-bold"
+                    className=" left-16 font-bold"
                 >
                     Nour Dev
-                </motion.span>
+                </motion.div>
                 <div className="icons flex gap-5 ">
                     <a href="#">
                         <Image

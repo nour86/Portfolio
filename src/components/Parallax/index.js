@@ -19,7 +19,7 @@ const Parallax = ({ type }) => {
 
     return (
         <div
-            className="parallax"
+            className="w-full h-full relative flex items-center content-center overflow-hidden"
             ref={ref}
             style={{
                 background:
@@ -28,7 +28,10 @@ const Parallax = ({ type }) => {
                         : 'linear-gradient(180deg,#111132,#505064)',
             }}
         >
-            <motion.h1 style={{ y: yText }}>
+            <motion.h1
+                className=" m-auto text-4xl sm:text-8xl"
+                style={{ y: yText }}
+            >
                 {type === 'services' ? 'what we do?' : 'My last Projects :'}
             </motion.h1>
             <motion.div className="mountains">
