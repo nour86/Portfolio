@@ -66,7 +66,7 @@ const Portfolio = ({ children }) => {
 
     return (
         <div className="relative w-full" ref={ref}>
-            <div className="sticky top-0 left-0 pt-8 text-center text-orange-400 text-6xl z-30">
+            <div className="sticky top-0 h-1/6 left-0 pt-4 text-center text-orange-400 text-6xl z-30">
                 <h2>My Works</h2>
                 <motion.div
                     style={{ scaleX }}

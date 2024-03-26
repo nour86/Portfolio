@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
@@ -14,7 +14,7 @@
         --background-start-rgb: 0, 0, 0;
         --background-end-rgb: 0, 0, 0;
     }
-}
+} */
 
 @layer utilities {
     .text-balance {
@@ -30,13 +30,17 @@
 html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    text-align: justify;
 }
 
 body {
     color: lightgray;
     background-color: #0c0c1d;
     overflow-x: hidden;
+    @screen md {
+        font-size: 1rem;
+    }
     @screen lg {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 }

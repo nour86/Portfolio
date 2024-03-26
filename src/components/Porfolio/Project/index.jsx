@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 import { motion, useScroll, useTransform, useInView } from 'framer-motion'
+import './style.css'
 import Diaporama from './Diaporama'
 import Link from 'next/link'
 
@@ -51,7 +52,7 @@ const Project = ({ project, children }) => {
             // className={` h-screen w-[200vw] snap-center bg-black flex items-center justify-center overflow-hidden m-auto gap-3 relative`}
             className={` h-screen w-[200vw] snap-center ${
                 idIsEven ? 'bg-gradient-to-b' : 'bg-gradient-to-t'
-            } from-slate-950 to-slate-800 flex items-center space between overflow-hidden m-auto relative`}
+            } from-slate-950 to-slate-800 flex items-center overflow-hidden m-auto relative`}
         >
             {/* for position ref */}
             <div
@@ -69,33 +70,39 @@ const Project = ({ project, children }) => {
                     duration: 0.5,
                 }}
                 exit={{ opacity: 0, x: '-100%' }}
-                className=" flex items-center flex-1 justify-center w-full h-3/4 bg-transparent "
+                className=" flex items-center flex-1 justify-center self-end w-full bg-green-500 h-5/6"
             >
-                <div className=" flex flex-col lg:flex-row w-[100vw] md:w-3/4 items-center justify-center px-8 gap-8 h-full bg-transparent ">
+                <div className="w-full md:w-3/4 max-w-screen-xl flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-8 h-full bg-slate-400 overflow-hidden ">
                     {/* imageContainer */}
-                    <div className=" relative flex flex-1 h-full items-center bg-transparent object-cover">
-                        <img
-                            src={project.cover}
-                            alt=""
-                            className="w-full object-cover"
-                        />
+                    <div className=" relative flex flex-1 md:flex-2 h-full items-center object-cover bg-red-400">
+                        <div className="bg-yellow-500 p-4">
+                            <img
+                                src={project.cover}
+                                alt=""
+                                className="w-full max-w-screen-sm m-auto md: object-cover rounded-xl"
+                            />
+                        </div>
                     </div>
                     {/* text container */}
-                    <motion.div
-                        className="flex-1 flex flex-col gap-8 overflow-none"
-                        style={{ y }}
-                    >
-                        <h3 className="text-gray-500 text-xl">
-                            {project.title}
-                        </h3>
-                        <p>{project.description}</p>
-                        <button
-                            className="bg-yellow-500 text-black border-none rounded-xl p-3 max-w-48 min-w-24 w-1/4 cursor-pointer"
-                            onClick={() => setExpanded(true)}
+                    <div className="flex flex-1 h-full max-w-screen-md justify-start items-start lg:items-center  bg-blue-700">
+                        <motion.div
+                            className="flex-1 flex flex-col gap-4 justify-center lg:items-start overflow-none"
+                            style={{ y }}
                         >
-                            See more
-                        </button>
-                    </motion.div>
+                            <h3 className="text-gray-500 text-4xl text-center lg:text-start">
+                                {project.title}
+                            </h3>
+                            <div className="px-2 bg-red-400 max-w-md ">
+                                <p>{project.description}</p>
+                            </div>
+                            <button
+                                className="bg-yellow-500 text-black border-none rounded-xl p-3 w-64  cursor-pointer self-center lg:self-start"
+                                onClick={() => setExpanded(true)}
+                            >
+                                See more
+                            </button>
+                        </motion.div>
+                    </div>
                 </div>
             </motion.article>
 
@@ -111,44 +118,49 @@ const Project = ({ project, children }) => {
                     duration: 0.5,
                 }}
                 exit={{ opacity: 0, scale: 0, x: '100%' }}
-                className="relative flex items-center flex-1 justify-center w-full h-3/4 bg-transparent  mt-6   "
+                className="relative flex items-center flex-1 justify-center self-end w-full h-5/6 bg-green-800"
             >
-                <motion.div className="w-2/3 max-w-[1280px] flex flex-col h-full gap-6 py-4">
-                    <div className="flex">
-                        <div className=" relative h-full w-1/3 flex flex-col  px-7 items-center object-cover bg-transparent">
-                            <img
-                                className="flex-2 m-6"
-                                src={project.logo}
-                            ></img>
-                            <Diaporama pictures={project.diapo} />
-                        </div>
-                        <motion.div className=" w-2/3 h-full flex p-7 justify-between flex-col gap-8">
-                            {children}
-                        </motion.div>
+                <motion.div className="w-full h-full md:w-5/6 max-w-screen-xl grid grid-cols-4 bg-red-900">
+                    <div className=" col-span-5 row-span-2 md:col-span-2 md:row-span-3   bg-purple-400">
+                        <img
+                            src={project.cover}
+                            alt=""
+                            className="w-full max-w-screen-sm m-auto md: object-cover rounded-xl"
+                        />
                     </div>
-                    <div className="flex gap-12 justify-end">
-                        {project.website && (
+
+                    <motion.div className="col-span-5 row-span-2 md:col-span-2 md:row-span-5  bg-blue-400">
+                        {children}
+                    </motion.div>
+
+                    <div className="col-span-5 row-span-1 md:col-span-2 md:row-span-2  bg-slate-400">
+                        <div className="flex flex-col h-full justify-evenly items-center">
+                            {project.website && (
+                                <Link
+                                    className="bg-yellow-500 text-black px-3 flex content-center justify-between border-none rounded-xl p-3 w-48 lg:w-60 h-12 cursor-pointer"
+                                    href={project.repo}
+                                    target="blank"
+                                >
+                                    Visit
+                                    <img
+                                        src={project.logo}
+                                        className="h-6"
+                                    ></img>
+                                </Link>
+                            )}
+
                             <Link
                                 className="bg-yellow-500 text-black px-3 flex content-center justify-between border-none rounded-xl p-3 w-48 lg:w-60 h-12 cursor-pointer"
                                 href={project.repo}
                                 target="blank"
                             >
-                                Visit
-                                <img src={project.logo} className="h-6"></img>
+                                See my repo
+                                <img
+                                    src="./logos/github.svg"
+                                    className="h-6 w-6 hover:translate-y-2"
+                                ></img>
                             </Link>
-                        )}
-
-                        <Link
-                            className="bg-yellow-500 text-black px-3 flex content-center justify-between border-none rounded-xl p-3 w-48 lg:w-60 h-12 cursor-pointer"
-                            href={project.repo}
-                            target="blank"
-                        >
-                            See my repo
-                            <img
-                                src="./logos/github.svg"
-                                className="h-6 w-6 hover:translate-y-2"
-                            ></img>
-                        </Link>
+                        </div>
                     </div>
                 </motion.div>
             </motion.article>

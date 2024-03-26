@@ -1,0 +1,20 @@
+.container1 {
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    grid-gap: 1rem;
+}
+
+.header1 {
+    grid-row: 1 / span 2;
+    background-color: blue;
+}
+
+.title1 {
+    grid-row: 1 / span 3;
+
+    background-color: pink;
+}
+
+.buttons1 {
+    background-color: green;
+}

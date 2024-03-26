@@ -2,7 +2,7 @@ import React from 'react'
 
 const TechnoUsed = ({ technos }) => {
     return (
-        <div className="w-full flex justify-center justify-items-center">
+        <div className="w-full flex justify-center justify-items-center bg-yellow-300">
             {technos.map((techno, index) => {
                 return (
                     <img

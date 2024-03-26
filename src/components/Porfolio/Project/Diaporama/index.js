@@ -57,7 +57,7 @@ const Diaporama = ({ pictures }) => {
 
     return (
         <>
-            <div className="w-full h-[30vw] flex self-center items-center justify-center object-contain relative overflow-hidden rounded-lg p-3">
+            <div className="w-full h-[30vw] flex self-center items-center justify-center object-contain relative overflow-hidden bg-red-300 rounded-lg p-3">
                 <AnimatePresence initial={false} custom={direction}>
                     <motion.img
                         variants={variants}
@@ -66,7 +66,7 @@ const Diaporama = ({ pictures }) => {
                         exit="exit"
                         src={images[index].img}
                         alt="slides"
-                        className="absolute h-[30vw] object-cover m-auto self-center rounded-xl"
+                        className="absolute h-[30vw] object-cover m-auto self-center bg-red-900 rounded-xl"
                         key={index}
                         custom={direction}
                     />
