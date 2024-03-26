@@ -2,6 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import ParticlesBackground from '../Particles'
 
 const textVariants = {
     initial: {

@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react'
 import './style.css'
+import ParticlesBackground from '../Particles'
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 
@@ -28,9 +29,13 @@ const Parallax = ({ type }) => {
             }}
         >
             <motion.h1 style={{ y: yText }}>
-                {type === 'services' ? 'what we do?' : 'what we did?'}
+                {type === 'services' ? 'what we do?' : 'My last Projects :'}
             </motion.h1>
-            <motion.div className="mountains"></motion.div>
+            <motion.div className="mountains">
+                <div className=" w-full h-full relative overflow-hidden">
+                    <ParticlesBackground />
+                </div>
+            </motion.div>
             <motion.div
                 className="planets"
                 style={{

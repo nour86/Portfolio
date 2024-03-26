@@ -11,8 +11,8 @@ const variants = {
         x: 0,
         transition: {
             type: 'spring',
-            stiffness: '400',
-            damping: 30,
+            stiffness: '300',
+            damping: 20,
         },
     },
     expanded: {
@@ -20,8 +20,8 @@ const variants = {
         transition: {
             duration: 0.5,
             type: 'spring',
-            stiffness: '400',
-            damping: 30,
+            stiffness: '300',
+            damping: 20,
         },
     },
 }
