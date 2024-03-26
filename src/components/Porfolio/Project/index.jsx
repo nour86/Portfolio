@@ -3,9 +3,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 
 import { motion, useScroll, useTransform, useInView } from 'framer-motion'
-import './style.css'
-import Diaporama from './Diaporama'
 import Link from 'next/link'
+import Slider from './Slider'
 
 const variants = {
     closed: {
@@ -121,12 +120,15 @@ const Project = ({ project, children }) => {
                 className="relative flex items-center flex-1 justify-center self-end w-full h-5/6 "
             >
                 <motion.div className="w-full h-full md:w-5/6 max-w-screen-xl grid grid-cols-10 gap-x-3 ">
-                    <div className=" col-span-10 row-span-2 md:col-span-6 md:row-span-3 lg:col-span-5 lg:row-span-3   ">
+                    {/* <div className=" col-span-10 row-span-2 md:col-span-6 md:row-span-3 lg:col-span-5 lg:row-span-3   ">
                         <img
                             src={project.cover}
                             alt=""
                             className="w-full max-w-screen-sm m-auto md: object-cover rounded-xl"
                         />
+                    </div> */}
+                    <div className=" col-span-10 row-span-2 md:col-span-6 md:row-span-3 lg:col-span-5 lg:row-span-3   ">
+                        <Slider data={project.diapo} />
                     </div>
 
                     <motion.div className="col-span-10 row-span-2 md:col-span-4 md:row-span-5 lg:col-span-5 lg:row-span-5  ">
