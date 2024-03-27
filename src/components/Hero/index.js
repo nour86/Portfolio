@@ -65,7 +65,10 @@ function Hero() {
                         <br className="hidden sm:visible" />
                         intégrateur
                     </motion.h1>
-                    <motion.div variants={textVariants} className="flex gap-5">
+                    <motion.div
+                        variants={textVariants}
+                        className="flex flex-col sm:flex-row gap-5 mt-5"
+                    >
                         <motion.button
                             variants={textVariants}
                             className=" p-5 border-2 border-solid border-white rounded-xl bg text-white cursor-pointer z-10"

@@ -4,6 +4,7 @@ import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 import './style.css'
+import DisplayTechnos from '../Porfolio/Project/DisplayTechnos'
 
 const variants = {
     initial: {
@@ -22,104 +23,125 @@ const variants = {
     },
 }
 
+const used = ['html5', 'css3', 'javascript', 'reactjs']
+const workedWith = ['nextjsdark', 'tailwind', 'nodejs', 'mongodb']
+const tools = ['git', 'githubdark', 'sass']
+
 const Services = () => {
     const ref = useRef()
-    const isInView = useInView(ref, { margin: '-200px' })
+    const isInView = useInView(ref, { margin: '-400px' })
 
     return (
         <motion.div
-            className="services"
+            name="services"
+            className="h-full flex flex-col items-center justify-between overflow-hidden p-3 sm:p-10 bg-gradient-to-b  from-slate-950 to-slate-800"
             variants={variants}
             initial="initial"
             animate={isInView && 'animate'}
             ref={ref}
         >
-            <div className="textContainer" variants={variants}>
-                <p>
-                    I focus on helping your brand grow
-                    <br />
-                    and move forward
+            <div
+                name="text-container"
+                className="flex-2 flex w-2/3 self-end text-end items-center gap-5 mb-9"
+                variants={variants}
+            >
+                <p className=" font-light text-xl sm:text-2xl text-gray-400 right-0">
+                    A propos de moi
                 </p>
-                <hr />
+                <hr className=" w-1/2 border-t border-solid border-gray-400" />
             </div>
-            <motion.div className="titleContainer" variants={variants}>
-                <div className="title">
-                    <img src="/people.webp" alt="people" />
+            <motion.div
+                name="titleContainer"
+                className="flex flex-2 flex-col items-center"
+                variants={variants}
+            >
+                <div className="flex items-start gap-6 sm:gap-12">
+                    {/* <img
+                        className="w-72 h-24 rounded-3xl object-cover"
+                        src="/people.webp"
+                        alt="people"
+                    /> */}
 
-                    <h2>
-                        <motion.b whileHover={{ color: 'orange' }}>
-                            Unique
+                    <h1 className=" text-2xl sm:text-4xl text-center sm:text-left font-extralight">
+                        <motion.b
+                            className="text-4xl sm:text-6xl text-white"
+                            whileHover={{ color: 'orange' }}
+                        >
+                            Développeur web{' '}
+                        </motion.b>
+                        junior <br className="hidden sm:flex" />
+                        <motion.b
+                            className="text-4xl sm:text-6xl text-white"
+                            whileHover={{ color: 'orange' }}
+                        >
+                            Passionné
                         </motion.b>{' '}
-                        Idead
-                    </h2>
-                </div>
-                <div className="title">
-                    <h2>
-                        <motion.b whileHover={{ color: 'orange' }}>
-                            For your
-                        </motion.b>{' '}
-                        Business
-                    </h2>
-                    <button>What we DO?</button>
+                        par l'UI/UX desing
+                    </h1>
                 </div>
             </motion.div>
-            <motion.div className="listContainer" variants={variants}>
-                <motion.div
-                    className="box"
-                    whileHover={{ background: 'lightgray', color: 'black' }}
-                >
-                    <h2>Branding</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Ad repellendus ipsum hic voluptatibus unde
-                        quibusdam aspernatur cumque doloremque incidunt. Quia
-                        saepe unde rerum ea tempore consequuntur quis incidunt
-                        ullam reiciendis!
-                    </p>
-                    <button>Go!</button>
+            <motion.div
+                className="flex-2 flex flex-col justify-center items-center max-w-7xl"
+                variants={variants}
+            >
+                <motion.div className="  flex-1 flex flex-col sm:flex-row max-w-6xl justify-between border-solid">
+                    <div className="flex-1 px-5 leading-relaxed my-3 bg-transparent hidden sm:flex sm:flex-col">
+                        <p className="my-3">
+                            Après une première carrière dans le contrôle de
+                            gestion, suivie de plusieurs années à l'étranger
+                            dans le secteur humanitaire, je suis de retour à
+                            Paris et je me lance dans le développement web.
+                        </p>
+                        <p className="my-3">
+                            Féru de puzzles et de résolution d'énigmes, je peux
+                            passer des journées entières sur codewar si je ne
+                            fais pas attention...
+                        </p>
+                        <p className="my-3">
+                            Je suis toujours enthousiaste à l'idée d'apprendre
+                            et de découvrir de nouvelles opportunités dans le
+                            monde du développement web
+                        </p>
+                    </div>
+                    <motion.div className=" p-5 w-full sm:max-w-80 float-right border-solid flex flex-col items-end text-end">
+                        <div>
+                            <h2>Les technos que j'utilise</h2>
+                            <div className="flex m-3">
+                                <DisplayTechnos
+                                    array={used}
+                                    style="flex justify-center justify-items-center bg-transparent gap-4"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <h2>j'ai aussi pu travailler avec </h2>
+                            <div className="flex m-3">
+                                <DisplayTechnos
+                                    array={workedWith}
+                                    style="flex justify-center justify-items-center bg-transparent gap-4 "
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <h2>mes outils du quotidien </h2>
+                            <div className="flex m-3">
+                                <DisplayTechnos
+                                    array={tools}
+                                    style="flex justify-center justify-items-center bg-transparent gap-4 "
+                                />
+                            </div>
+                        </div>
+                    </motion.div>
                 </motion.div>
-                <motion.div
-                    className="box"
-                    whileHover={{ background: 'lightgray', color: 'black' }}
-                >
-                    <h2>Branding</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Ad repellendus ipsum hic voluptatibus unde
-                        quibusdam aspernatur cumque doloremque incidunt. Quia
-                        saepe unde rerum ea tempore consequuntur quis incidunt
-                        ullam reiciendis!
-                    </p>
-                    <button>Go!</button>
-                </motion.div>
-                <motion.div
-                    className="box"
-                    whileHover={{ background: 'lightgray', color: 'black' }}
-                >
-                    <h2>Branding</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Ad repellendus ipsum hic voluptatibus unde
-                        quibusdam aspernatur cumque doloremque incidunt. Quia
-                        saepe unde rerum ea tempore consequuntur quis incidunt
-                        ullam reiciendis!
-                    </p>
-                    <button>Go!</button>
-                </motion.div>
-                <motion.div
-                    className="box"
-                    whileHover={{ background: 'lightgray', color: 'black' }}
-                >
-                    <h2>Branding</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Ad repellendus ipsum hic voluptatibus unde
-                        quibusdam aspernatur cumque doloremque incidunt. Quia
-                        saepe unde rerum ea tempore consequuntur quis incidunt
-                        ullam reiciendis!
-                    </p>
-                    <button>Go!</button>
-                </motion.div>
+
+                <div className="flex justify-between  p-5 border-solid w-full gap-9">
+                    <motion.button className=" p-5 border-2 border-solid border-white rounded-xl bg text-white cursor-pointer z-10">
+                        contact Me
+                    </motion.button>
+                    <motion.button className=" p-5 border-2 border-solid border-white rounded-xl bg text-white cursor-pointer z-10">
+                        Visit my Github
+                    </motion.button>
+                </div>
             </motion.div>
         </motion.div>
     )

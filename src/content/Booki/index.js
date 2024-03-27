@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Project from '@/components/Porfolio/Project'
-import TechnoUsed from '@/components/Porfolio/Project/TechnoUsed'
+import TechnoUsed from '@/components/Porfolio/Project/DisplayTechnos'
 
 const booki = {
     id: 2,
@@ -30,7 +30,7 @@ const Booki = () => {
                 <h3 className="text-2xl md:text-4xl bg-fuchsia-400 p-3">
                     {booki.subtitle}
                 </h3>
-                <TechnoUsed technos={booki.technos} />
+                <TechnoUsed array={booki.technos} />
                 <div className=" flex md:flex-row w-full justify-between bg-slate-200 p-3  text-blue-400 align-top">
                     <p className="flex flex-1  text-1xl   bg-slate-800 md:text-2xl">
                         Booki est un site Internet qui permettait aux usagers de

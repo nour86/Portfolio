@@ -20,9 +20,9 @@ export default function Home() {
             {/* <Section id="Services">
                 <Parallax type="services" />
             </Section> */}
-            {/* <Section>
+            <Section>
                 <Services />
-            </Section> */}
+            </Section>
             <Section id="Portfolio">
                 <Parallax type="portfolio" />
             </Section>
