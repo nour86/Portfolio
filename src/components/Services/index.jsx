@@ -23,13 +23,31 @@ const variants = {
     },
 }
 
+const technoVariants = {
+    initial: {
+        x: 500,
+        opacity: 0,
+    },
+    animate: {
+        x: 0,
+        opacity: 1,
+        transition: {
+            duration: 1,
+            staggerChildren: 0.2,
+            type: 'spring',
+            stiffness: '200',
+            damping: 20,
+        },
+    },
+}
+
 const used = ['html5', 'css3', 'javascript', 'reactjs']
 const workedWith = ['nextjsdark', 'tailwind', 'nodejs', 'mongodb']
 const tools = ['git', 'githubdark', 'sass']
 
 const Services = () => {
     const ref = useRef()
-    const isInView = useInView(ref, { margin: '-400px' })
+    const isInView = useInView(ref, { margin: '-200px' })
 
     return (
         <motion.div
@@ -55,7 +73,7 @@ const Services = () => {
                 className="flex flex-2 flex-col items-center"
                 variants={variants}
             >
-                <div className="flex items-start gap-6 sm:gap-12">
+                <motion.div className="flex items-start gap-6 sm:gap-12">
                     {/* <img
                         className="w-72 h-24 rounded-3xl object-cover"
                         src="/people.webp"
@@ -78,14 +96,14 @@ const Services = () => {
                         </motion.b>{' '}
                         par l'UI/UX desing
                     </h1>
-                </div>
+                </motion.div>
             </motion.div>
             <motion.div
                 className="flex-2 flex flex-col justify-center items-center max-w-7xl"
                 variants={variants}
             >
                 <motion.div className="  flex-1 flex flex-col sm:flex-row max-w-6xl justify-between border-solid">
-                    <div className="flex-1 px-5 leading-relaxed my-3 bg-transparent hidden sm:flex sm:flex-col">
+                    <motion.div className="flex-1 px-5 leading-relaxed my-3 bg-transparent hidden sm:flex sm:flex-col">
                         <p className="my-3">
                             Après une première carrière dans le contrôle de
                             gestion, suivie de plusieurs années à l'étranger
@@ -102,35 +120,53 @@ const Services = () => {
                             et de découvrir de nouvelles opportunités dans le
                             monde du développement web
                         </p>
-                    </div>
-                    <motion.div className=" p-5 w-full sm:max-w-80 float-right border-solid flex flex-col items-end text-end">
-                        <div>
+                    </motion.div>
+                    <motion.div
+                        className=" p-5 w-full sm:max-w-80 float-right border-solid flex flex-col items-end text-end"
+                        variants={technoVariants}
+                    >
+                        <motion.div variants={technoVariants}>
                             <h2>Les technos que j'utilise</h2>
-                            <div className="flex m-3">
+                            <motion.div
+                                className="flex m-3"
+                                variants={technoVariants}
+                                initial="initial"
+                                animate={isInView && 'animate'}
+                            >
                                 <DisplayTechnos
                                     array={used}
                                     style="flex justify-center justify-items-center bg-transparent gap-4"
                                 />
-                            </div>
-                        </div>
-                        <div>
+                            </motion.div>
+                        </motion.div>
+                        <motion.div variants={technoVariants}>
                             <h2>j'ai aussi pu travailler avec </h2>
-                            <div className="flex m-3">
+                            <motion.div
+                                className="flex m-3"
+                                variants={technoVariants}
+                                initial="initial"
+                                animate={isInView && 'animate'}
+                            >
                                 <DisplayTechnos
                                     array={workedWith}
                                     style="flex justify-center justify-items-center bg-transparent gap-4 "
                                 />
-                            </div>
-                        </div>
-                        <div>
+                            </motion.div>
+                        </motion.div>
+                        <motion.div variants={technoVariants}>
                             <h2>mes outils du quotidien </h2>
-                            <div className="flex m-3">
+                            <motion.div
+                                className="flex m-3"
+                                variants={technoVariants}
+                                initial="initial"
+                                animate={isInView && 'animate'}
+                            >
                                 <DisplayTechnos
                                     array={tools}
                                     style="flex justify-center justify-items-center bg-transparent gap-4 "
                                 />
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
                     </motion.div>
                 </motion.div>
 
