@@ -16,9 +16,8 @@ const variants = {
         },
     },
     expanded: {
-        x: '-50%',
+        x: '-100vw',
         transition: {
-            duration: 0.5,
             type: 'spring',
             stiffness: '300',
             damping: 20,
@@ -46,12 +45,12 @@ const Project = ({ project, children }) => {
     return (
         // portfolioContainer
         <motion.section
-            animate={expanded ? 'expanded' : 'closed'}
-            variants={variants}
+            // animate={expanded ? 'expanded' : 'closed'}
+            // variants={variants}
             // className={` h-screen w-[200vw] snap-center bg-black flex items-center justify-center overflow-hidden m-auto gap-3 relative`}
-            className={` h-screen w-[200vw] snap-center ${
+            className={` h-screen w-[100vw] snap-center ${
                 idIsEven ? 'bg-gradient-to-b' : 'bg-gradient-to-t'
-            } from-slate-950 to-slate-800 flex items-center overflow-hidden m-auto relative`}
+            } from-slate-950 to-slate-800 flex items-center overflow-hidden relative`}
         >
             {/* for position ref */}
             <div
@@ -63,13 +62,14 @@ const Project = ({ project, children }) => {
             <motion.article
                 key={`preview${project.title}`}
                 initial={{ opacity: 0, x: '-100%' }}
-                animate={{ opacity: 1, x: 0 }}
+                animate={expanded ? 'expanded' : { opacity: 1, x: 0 }}
+                variants={variants}
                 transition={{
                     ease: 'easeOut',
                     duration: 0.5,
                 }}
                 exit={{ opacity: 0, x: '-100%' }}
-                className=" flex items-center flex-1 justify-center self-end w-full h-5/6"
+                className=" flex items-center justify-center self-end w-full h-5/6"
             >
                 <div className="w-full md:w-3/4 max-w-screen-xl flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-8 h-fulloverflow-hidden ">
                     {/* imageContainer */}
@@ -106,66 +106,66 @@ const Project = ({ project, children }) => {
             </motion.article>
 
             {/* more infos */}
-
-            <motion.article
-                key={`details${project.title}`}
-                initial={{ opacity: 0, scale: 0, x: '100%' }}
-                animate={{ opacity: 1, scale: 1, x: 0 }}
-                transition={{
-                    ease: 'easeOut',
-                    delay: 0.5,
-                    duration: 0.5,
-                }}
-                exit={{ opacity: 0, scale: 0, x: '100%' }}
-                className="relative flex items-center flex-1 justify-center self-end w-full h-5/6 "
-            >
-                <motion.div className="w-full h-full md:w-5/6 max-w-screen-xl grid grid-cols-10 gap-x-3 ">
-                    {/* <div className=" col-span-10 row-span-2 md:col-span-6 md:row-span-3 lg:col-span-5 lg:row-span-3   ">
+            {expanded && (
+                <motion.article
+                    key={`details${project.title}`}
+                    initial={{ opacity: 0, scale: 0, x: '100%', y: '30%' }}
+                    animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
+                    transition={{
+                        ease: 'easeOut',
+                        duration: 0.5,
+                    }}
+                    exit={{ opacity: 0, scale: 0, x: '100%' }}
+                    className="z-1 absolute flex items-center justify-center self-end w-[100vw] h-5/6 "
+                >
+                    <motion.div className="w-full h-full md:w-5/6 max-w-screen-xl grid grid-cols-10 gap-x-3 ">
+                        {/* <div className=" col-span-10 row-span-2 md:col-span-6 md:row-span-3 lg:col-span-5 lg:row-span-3   ">
                         <img
                             src={project.cover}
                             alt=""
                             className="w-full max-w-screen-sm m-auto md: object-cover rounded-xl"
                         />
                     </div> */}
-                    <div className=" col-span-10 row-span-2 md:col-span-6 md:row-span-3 lg:col-span-5 lg:row-span-3   ">
-                        <Slider data={project.diapo} />
-                    </div>
+                        <div className=" col-span-10 row-span-2 md:col-span-6 md:row-span-3 lg:col-span-5 lg:row-span-3   ">
+                            <Slider data={project.diapo} />
+                        </div>
 
-                    <motion.div className="col-span-10 row-span-2 md:col-span-4 md:row-span-5 lg:col-span-5 lg:row-span-5  ">
-                        {children}
-                    </motion.div>
+                        <motion.div className="col-span-10 row-span-2 md:col-span-4 md:row-span-5 lg:col-span-5 lg:row-span-5  ">
+                            {children}
+                        </motion.div>
 
-                    <div className="col-span-10 row-span-1 md:col-span-6 md:row-span-2 lg:col-span-5 lg:row-span-2  ">
-                        <div className="flex flex-col h-full justify-evenly items-center">
-                            {project.website && (
+                        <div className="col-span-10 row-span-1 md:col-span-6 md:row-span-2 lg:col-span-5 lg:row-span-2  ">
+                            <div className="flex flex-col h-full justify-evenly items-center">
+                                {project.website && (
+                                    <Link
+                                        className="bg-yellow-500 text-black px-3 flex content-center justify-between border-none rounded-xl p-3 w-48 lg:w-60 h-12 cursor-pointer"
+                                        href={project.repo}
+                                        target="blank"
+                                    >
+                                        Visit
+                                        <img
+                                            src={project.logo}
+                                            className="h-6"
+                                        ></img>
+                                    </Link>
+                                )}
+
                                 <Link
                                     className="bg-yellow-500 text-black px-3 flex content-center justify-between border-none rounded-xl p-3 w-48 lg:w-60 h-12 cursor-pointer"
                                     href={project.repo}
                                     target="blank"
                                 >
-                                    Visit
+                                    See my repo
                                     <img
-                                        src={project.logo}
-                                        className="h-6"
+                                        src="./logos/github.svg"
+                                        className="h-6 w-6 hover:translate-y-2"
                                     ></img>
                                 </Link>
-                            )}
-
-                            <Link
-                                className="bg-yellow-500 text-black px-3 flex content-center justify-between border-none rounded-xl p-3 w-48 lg:w-60 h-12 cursor-pointer"
-                                href={project.repo}
-                                target="blank"
-                            >
-                                See my repo
-                                <img
-                                    src="./logos/github.svg"
-                                    className="h-6 w-6 hover:translate-y-2"
-                                ></img>
-                            </Link>
+                            </div>
                         </div>
-                    </div>
-                </motion.div>
-            </motion.article>
+                    </motion.div>
+                </motion.article>
+            )}
         </motion.section>
     )
 }
