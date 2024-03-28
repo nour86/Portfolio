@@ -5,6 +5,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform, useInView } from 'framer-motion'
 import Link from 'next/link'
 import Slider from './Slider'
+import DisplayTechnos from './DisplayTechnos'
 
 const variants = {
     closed: {
@@ -45,9 +46,6 @@ const Project = ({ project, children }) => {
     return (
         // portfolioContainer
         <motion.section
-            // animate={expanded ? 'expanded' : 'closed'}
-            // variants={variants}
-            // className={` h-screen w-[200vw] snap-center bg-black flex items-center justify-center overflow-hidden m-auto gap-3 relative`}
             className={` h-screen w-[100vw] snap-center ${
                 idIsEven ? 'bg-gradient-to-b' : 'bg-gradient-to-t'
             } from-slate-950 to-slate-800 flex items-center overflow-hidden relative`}
@@ -116,51 +114,95 @@ const Project = ({ project, children }) => {
                         duration: 0.5,
                     }}
                     exit={{ opacity: 0, scale: 0, x: '100%' }}
-                    className="z-1 absolute flex items-center justify-center self-end w-[100vw] h-5/6 "
+                    className="z-10 absolute flex items-center justify-center self-end w-[100vw] h-5/6 "
                 >
                     <motion.div className="w-full h-full md:w-5/6 max-w-screen-xl grid grid-cols-10 gap-x-3 ">
-                        {/* <div className=" col-span-10 row-span-2 md:col-span-6 md:row-span-3 lg:col-span-5 lg:row-span-3   ">
-                        <img
-                            src={project.cover}
-                            alt=""
-                            className="w-full max-w-screen-sm m-auto md: object-cover rounded-xl"
-                        />
-                    </div> */}
-                        <div className=" col-span-10 row-span-2 md:col-span-6 md:row-span-3 lg:col-span-5 lg:row-span-3   ">
-                            <Slider data={project.diapo} />
+                        <div
+                            name="diapo-grid"
+                            className=" col-span-10 row-span-2 md:col-span-6 md:row-span-3 lg:col-span-5 lg:row-span-3 "
+                        >
+                            <div
+                                name="diapo-screen"
+                                className=" flex flex-col h-full items-center relative"
+                            >
+                                <picture>
+                                    <source
+                                        media="(max-width: 768px)"
+                                        srcSet="./diapo/macbook2.svg 768w"
+                                        sizes="768px"
+                                    />
+
+                                    <img
+                                        src="./diapo/imac.svg"
+                                        alt="visionneuse"
+                                        className="absolute -z-10 top-0 left-1/2 -translate-x-1/2 w-5/6 md:w-screen block"
+                                    />
+                                </picture>
+
+                                <div className="relative w-7/12 mt-[3vw] md:w-[calc(96%)] md:m-3 aspect-video shadow-inner rounded-md bg-transparent overflow-hidden">
+                                    <Slider data={project.diapo} />
+                                </div>
+                            </div>
                         </div>
 
                         <motion.div className="col-span-10 row-span-2 md:col-span-4 md:row-span-5 lg:col-span-5 lg:row-span-5  ">
-                            {children}
+                            <div className="flex flex-col gap-5 m-6 md:ml-12 ">
+                                <h3 className="text-xl md:text-2xl bg-transparent text-gray-500">
+                                    {project.subtitle}
+                                </h3>
+                                <DisplayTechnos
+                                    array={project.technos}
+                                    style="flex flex-row items-center"
+                                />
+                                <div className=" flex md:flex-row w-full justify-between">
+                                    <p className="flex flex-1  text-md   md:text-1xl">
+                                        Booki est un site Internet qui permet
+                                        aux usagers de trouver des hébergements
+                                        et des activités dans la ville de leur
+                                        choix.
+                                        <br /> L'objectif est d intégrer l
+                                        interface du site avec du code HTML et
+                                        CSS, à partir de maquettes Figma.
+                                    </p>
+                                </div>
+                            </div>
                         </motion.div>
 
                         <div className="col-span-10 row-span-1 md:col-span-6 md:row-span-2 lg:col-span-5 lg:row-span-2  ">
-                            <div className="flex flex-col h-full justify-evenly items-center">
+                            <div className="flex flex-wrap gap-6 h-full justify-evenly items-center">
                                 {project.website && (
+                                    <motion.button whileHover={{ scale: 0.9 }}>
+                                        <Link
+                                            className="bg-yellow-500 text-black px-3 flex items-center justify-evenly border-none rounded-xl p-3 w-24 sm:w-48 lg:w-60 h-12 cursor-pointer"
+                                            href={project.repo}
+                                            target="blank"
+                                            whileHo
+                                        >
+                                            <p className="hidden sm:inline">
+                                                Visit
+                                            </p>
+                                            <img
+                                                src={project.logo}
+                                                className="h-6"
+                                            ></img>
+                                        </Link>
+                                    </motion.button>
+                                )}
+                                <motion.button whileHover={{ scale: 0.9 }}>
                                     <Link
-                                        className="bg-yellow-500 text-black px-3 flex content-center justify-between border-none rounded-xl p-3 w-48 lg:w-60 h-12 cursor-pointer"
+                                        className="bg-yellow-500 text-black px-3 flex items-center justify-evenly border-none rounded-xl p-3  w-24 sm:w-48 lg:w-60 h-12 cursor-pointer"
                                         href={project.repo}
                                         target="blank"
                                     >
-                                        Visit
+                                        <p className="hidden sm:inline">
+                                            See me repo
+                                        </p>
                                         <img
-                                            src={project.logo}
-                                            className="h-6"
+                                            src="./logos/github.svg"
+                                            className="h-6 w-6 hover:translate-y-2"
                                         ></img>
                                     </Link>
-                                )}
-
-                                <Link
-                                    className="bg-yellow-500 text-black px-3 flex content-center justify-between border-none rounded-xl p-3 w-48 lg:w-60 h-12 cursor-pointer"
-                                    href={project.repo}
-                                    target="blank"
-                                >
-                                    See my repo
-                                    <img
-                                        src="./logos/github.svg"
-                                        className="h-6 w-6 hover:translate-y-2"
-                                    ></img>
-                                </Link>
+                                </motion.button>
                             </div>
                         </div>
                     </motion.div>

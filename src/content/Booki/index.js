@@ -33,7 +33,7 @@ const Booki = () => {
                 <TechnoUsed array={booki.technos} />
                 <div className=" flex md:flex-row w-full justify-between bg-slate-200 p-3  text-blue-400 align-top">
                     <p className="flex flex-1  text-1xl   bg-slate-800 md:text-2xl">
-                        Booki est un site Internet qui permettait aux usagers de
+                        Booki est un site Internet qui permet aux usagers de
                         trouver des hébergements et des activités dans la ville
                         de leur choix.
                         <br /> L'objectif est d intégrer l interface du site

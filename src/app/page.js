@@ -1,4 +1,4 @@
-import Navbar from '@/components/Navbar'
+import Navbar from '@/components/Header'
 import Section from '@/components/Section'
 import Test from '@/components/Test'
 import Hero from '@/components/Hero'
@@ -9,35 +9,25 @@ import Kasa from '@/content/Kasa'
 import Booki from '@/content/Booki'
 import Ohmyfood from '@/content/OhmyFood'
 import Contact from '@/components/Contact'
+import Sidebar from '@/components/Sidebar'
 
-export default function Home() {
+export default function Page() {
     return (
-        <div>
-            <Section>
-                <Navbar />
-                <Hero />
-            </Section>
+        <main>
+            <Sidebar />
+            <Hero />
             {/* <Section id="Services">
                 <Parallax type="services" />
             </Section> */}
-            <Section>
-                <Services />
-            </Section>
-            <Section id="Portfolio">
-                <Parallax type="portfolio" />
-            </Section>
-
+            <Services />
+            <Parallax type="portfolio" />
             <Portfolio>
                 <Kasa />
                 <Booki />
                 <Ohmyfood />
             </Portfolio>
-            <Section id="About">About</Section>
-            <Section id="Technologies">Technologies</Section>
-            <Section id="Contact">
-                <Contact />
-                <Test />
-            </Section>
-        </div>
+            <Contact />
+            <Test />
+        </main>
     )
 }

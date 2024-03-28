@@ -11,10 +11,15 @@ module.exports = {
                 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
                 'gradient-conic':
                     'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                imac: "url('/diapo/imac.svg')",
+                macbook: "url('/diapo/macbook.svg')",
             },
             fontSize: {
                 clamp4xl: 'clamp(2rem, 10vw, 6rem)',
                 clamp2xl: 'clamp(1rem, 5vw, 3rem)',
+            },
+            boxShadow: {
+                screen: '0 -7px -7px -15px rgba(0, 0, 0, 0.3)',
             },
         },
     },

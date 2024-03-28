@@ -18,8 +18,9 @@ const Parallax = ({ type }) => {
     const yText = useTransform(scrollYProgress, [0, 1], ['0%', '200%'])
 
     return (
-        <div
-            className="w-full h-full relative flex items-center content-center overflow-hidden"
+        <section
+            id="Portfolio"
+            className="w-full h-screen snap-center relative flex items-center content-center overflow-hidden"
             ref={ref}
             style={{
                 background:
@@ -49,7 +50,7 @@ const Parallax = ({ type }) => {
                 }}
             ></motion.div>
             <motion.div className="stars" style={{ x: yBg }}></motion.div>
-        </div>
+        </section>
     )
 }
 

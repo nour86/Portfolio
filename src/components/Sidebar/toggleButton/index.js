@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 
 const ToggleButton = ({ setOpen }) => {
     return (
-        <button
+        <motion.button
             className="w-12 h-12 rounded-full fixed top-6 left-9 z-50 border-none text-black bg-transparent"
             onClick={() => setOpen((prev) => !prev)}
         >
@@ -37,7 +37,7 @@ const ToggleButton = ({ setOpen }) => {
                     }}
                 />
             </svg>
-        </button>
+        </motion.button>
     )
 }
 

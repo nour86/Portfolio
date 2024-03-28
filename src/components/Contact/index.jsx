@@ -20,6 +20,9 @@ const variants = {
 }
 
 const Contact = () => {
+    const service = process.env.SERVICE_ID
+    console.log(service)
+
     const ref = useRef()
     const formRef = useRef()
     const [error, setError] = useState(false)
@@ -32,10 +35,10 @@ const Contact = () => {
 
         emailjs
             .sendForm(
-                'service_94y20xo',
-                'template_v10u2oh',
+                'service_ydfsg5q',
+                'template_w3y8fgh',
                 formRef.current,
-                'pX_2hasGmGcuvjXIW'
+                'kdY_aIFRMOZDc1CQx'
             )
             .then(
                 (result) => {
@@ -43,60 +46,64 @@ const Contact = () => {
                 },
                 (error) => {
                     setError(true)
+                    console.log(error.text)
                 }
             )
     }
 
     return (
-        <motion.div
-            ref={ref}
-            className="w-full p-2 flex flex-col sm:max-w-7xl sm:flex-row h-full m-auto justify-center items-center items gap-11"
-            variants={variants}
-            initial="initial"
-            whileInView="animate"
-        >
+        <section className="h-screen w-full snap-center" id="Contact">
             <motion.div
-                className=" flex-1 flex flex-col h-2/3 text-center items-center sm:gap-10 mt-16 sm:mt-0"
+                ref={ref}
+                className="w-full p-2 flex flex-col sm:max-w-7xl sm:flex-row h-full m-auto justify-center items-center items gap-11"
                 variants={variants}
+                initial="initial"
+                whileInView="animate"
             >
-                <motion.h1
-                    variants={variants}
-                    className=" text-3xl sm:text-6xl leading-[80px] "
-                >
-                    Let’s work together
-                </motion.h1>
-                <motion.div className="item" variants={variants}>
-                    <h2>Mail</h2>
-                    <span className="font-light">hello@react.dev</span>
-                </motion.div>
-                <motion.div className="item" variants={variants}>
-                    <h2>Address</h2>
-                    <span className="font-light">Hello street New York</span>
-                </motion.div>
-                <motion.div className="item" variants={variants}>
-                    <h2>Phone</h2>
-                    <span className="font-light">+1 234 5678</span>
-                </motion.div>
-            </motion.div>
-            <div className="flex-1 relative p-11 w-full sm:p-0 sm:w-fit">
                 <motion.div
-                    className=" stroke-orange-500 absolute m-auto -z-10"
-                    initial={{ opacity: 1 }}
-                    whileInView={{ opacity: 0 }}
-                    transition={{ delay: 3, duration: 1 }}
+                    className=" flex-1 flex flex-col h-2/3 text-center items-center sm:gap-10 mt-16 sm:mt-0"
+                    variants={variants}
                 >
-                    <svg
-                        width="450px"
-                        height="450px"
-                        viewBox="0 0 32.666 32.666"
+                    <motion.h1
+                        variants={variants}
+                        className=" text-3xl sm:text-6xl leading-[80px] "
                     >
-                        <motion.path
-                            strokeWidth={0.2}
-                            fill="none"
-                            initial={{ pathLength: 0 }}
-                            animate={isInView && { pathLength: 1 }}
-                            transition={{ duration: 3 }}
-                            d="M28.189,16.504h-1.666c0-5.437-4.422-9.858-9.856-9.858l-0.001-1.664C23.021,4.979,28.189,10.149,28.189,16.504z
+                        Let’s work together
+                    </motion.h1>
+                    <motion.div className="item" variants={variants}>
+                        <h2>Mail</h2>
+                        <span className="font-light">hello@react.dev</span>
+                    </motion.div>
+                    <motion.div className="item" variants={variants}>
+                        <h2>Address</h2>
+                        <span className="font-light">
+                            Hello street New York
+                        </span>
+                    </motion.div>
+                    <motion.div className="item" variants={variants}>
+                        <h2>Phone</h2>
+                        <span className="font-light">+1 234 5678</span>
+                    </motion.div>
+                </motion.div>
+                <div className="flex-1 relative p-11 w-full sm:p-0 sm:w-fit">
+                    <motion.div
+                        className=" stroke-orange-500 absolute m-auto -z-10"
+                        initial={{ opacity: 1 }}
+                        whileInView={{ opacity: 0 }}
+                        transition={{ delay: 3, duration: 1 }}
+                    >
+                        <svg
+                            width="250px"
+                            height="250px"
+                            viewBox="0 0 32.666 32.666"
+                        >
+                            <motion.path
+                                strokeWidth={0.2}
+                                fill="none"
+                                initial={{ pathLength: 0 }}
+                                animate={isInView && { pathLength: 1 }}
+                                transition={{ duration: 1.5 }}
+                                d="M28.189,16.504h-1.666c0-5.437-4.422-9.858-9.856-9.858l-0.001-1.664C23.021,4.979,28.189,10.149,28.189,16.504z
             M16.666,7.856L16.665,9.52c3.853,0,6.983,3.133,6.981,6.983l1.666-0.001C25.312,11.735,21.436,7.856,16.666,7.856z M16.333,0
             C7.326,0,0,7.326,0,16.334c0,9.006,7.326,16.332,16.333,16.332c0.557,0,1.007-0.45,1.007-1.006c0-0.559-0.45-1.01-1.007-1.01
             c-7.896,0-14.318-6.424-14.318-14.316c0-7.896,6.422-14.319,14.318-14.319c7.896,0,14.317,6.424,14.317,14.319
@@ -109,45 +116,48 @@ const Contact = () => {
             c1.041,1.228,2.127,2.416,3.245,3.576l-0.006,0.004c0.031,0.031,0.063,0.06,0.095,0.09c0.03,0.031,0.059,0.062,0.088,0.095
             l0.006-0.006c1.16,1.118,2.535,2.765,4.769,4.255c4.703,3.141,8.312,2.264,10.438,1.098c3.67-2.021,5.312-6.338,5.312-9.719
             C32.666,7.326,25.339,0,16.333,0z"
+                            />
+                        </svg>
+                    </motion.div>
+                    <motion.form
+                        className="flex flex-col gap-5"
+                        ref={formRef}
+                        onSubmit={sendEmail}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 2.5, duration: 1 }}
+                    >
+                        <input
+                            className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
+                            type="text"
+                            placeholder="Name"
+                            name="user_name"
+                            required
                         />
-                    </svg>
-                </motion.div>
-                <motion.form
-                    className="flex flex-col gap-5"
-                    ref={formRef}
-                    onSubmit={sendEmail}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 4, duration: 1 }}
-                >
-                    <input
-                        className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
-                        type="text"
-                        required
-                        placeholder="Name"
-                        name="name"
-                    />
-                    <input
-                        className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
-                        type="email"
-                        required
-                        placeholder="Email"
-                        name="email"
-                    />
-                    <textarea
-                        rows={8}
-                        className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
-                        placeholder="Message"
-                        name="message"
-                    />
-                    <button className="p-3 sm:p-5 border-none bg-orange-500 cursor-pointer font-medium">
-                        Submit
-                    </button>
-                    {error && 'Error'}
-                    {success && 'Success'}
-                </motion.form>
-            </div>
-        </motion.div>
+                        <input
+                            className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
+                            type="email"
+                            required
+                            placeholder="Email"
+                            name="user_email"
+                        />
+                        <textarea
+                            rows={8}
+                            className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
+                            placeholder="Message"
+                            name="message"
+                            required
+                        />
+                        <button className="p-3 sm:p-5 border-none bg-orange-500 cursor-pointer font-medium">
+                            Submit
+                        </button>
+                        {error && 'Error'}
+                        {success &&
+                            'Merci ! je vous recontacte dans les plus brefs délais!'}
+                    </motion.form>
+                </div>
+            </motion.div>
+        </section>
     )
 }
 

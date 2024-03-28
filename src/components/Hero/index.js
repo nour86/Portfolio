@@ -43,7 +43,7 @@ const sliderVariants = {
 
 function Hero() {
     return (
-        <div className=" h-[calc(100vh-100px)] overflow-hidden relative bg-gradient-to-b from-slate-950 to-slate-800">
+        <section className=" h-screen w-full snap-center overflow-hidden relative bg-gradient-to-b from-slate-950 to-slate-800">
             <div className="max-w-7xl m-auto h-full">
                 <motion.div
                     className=" p-4 h-full w-full items-center flex flex-col justify-center gap- "
@@ -99,7 +99,7 @@ function Hero() {
             >
                 Writer Content Creator
             </motion.div>
-        </div>
+        </section>
     )
 }
 

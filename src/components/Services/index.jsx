@@ -52,7 +52,7 @@ const Services = () => {
     return (
         <motion.div
             name="services"
-            className="h-full flex flex-col items-center justify-between overflow-hidden p-3 sm:p-10 bg-gradient-to-b  from-slate-950 to-slate-800"
+            className="h-screen w-full snap-center flex flex-col items-center justify-between overflow-hidden p-3 sm:p-10 bg-gradient-to-b  from-slate-950 to-slate-800"
             variants={variants}
             initial="initial"
             animate={isInView && 'animate'}

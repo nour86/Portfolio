@@ -42,6 +42,20 @@ const Links = ({ handler }) => {
                     {item}
                 </motion.a>
             ))}
+            <motion.a
+                className="text-2xl sm:text-4xl flex flex-row gap-2 mt-2"
+                variants={itemVariants}
+                href={'https://github.com/nour86'}
+                target="blank"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+            >
+                my github
+                <img
+                    className="h-10 w-10 sm:h-12 sm:w-12 hover:opacity-80 hover:translate-y-1"
+                    src="./logos/github.svg"
+                />
+            </motion.a>
         </motion.div>
     )
 }
