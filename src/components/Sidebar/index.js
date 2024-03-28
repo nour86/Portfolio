@@ -67,7 +67,7 @@ function Sidebar() {
         >
             {/* background */}
             <motion.div
-                className=" z-20 fixed top-0 left-0 bottom-10 h-1/2 sm:h-[1300px] w-full sm:w-96 bg-white text-black"
+                className=" z-20 fixed top-0 left-0 bottom-10 h-1/2 sm:h-full w-full sm:w-96 bg-white text-black"
                 variants={variants}
             >
                 <Links handler={() => setOpen(!open)} />

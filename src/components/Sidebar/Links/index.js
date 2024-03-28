@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const items = ['About', 'Services', 'Portfolio', 'Contact']
 
@@ -51,7 +52,9 @@ const Links = ({ handler }) => {
                 whileTap={{ scale: 0.9 }}
             >
                 my github
-                <img
+                <Image
+                    width={24}
+                    height={24}
                     className="h-10 w-10 sm:h-12 sm:w-12 hover:opacity-80 hover:translate-y-1"
                     src="./logos/github.svg"
                 />

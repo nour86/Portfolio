@@ -32,11 +32,10 @@ const technoVariants = {
         x: 0,
         opacity: 1,
         transition: {
-            duration: 1,
-            staggerChildren: 0.2,
+            staggerChildren: 0.5,
             type: 'spring',
-            stiffness: '200',
-            damping: 20,
+            stiffness: '400',
+            damping: 60,
         },
     },
 }
@@ -70,17 +69,11 @@ const Services = () => {
             </div>
             <motion.div
                 name="titleContainer"
-                className="flex flex-2 flex-col items-center"
+                className="flex flex-2 flex-col w-full items-center md:items-start "
                 variants={variants}
             >
-                <motion.div className="flex items-start gap-6 sm:gap-12">
-                    {/* <img
-                        className="w-72 h-24 rounded-3xl object-cover"
-                        src="/people.webp"
-                        alt="people"
-                    /> */}
-
-                    <h1 className=" text-2xl sm:text-4xl text-center sm:text-left font-extralight">
+                <motion.div className="flex items-start px-5 gap-6 sm:gap-12">
+                    <h1 className=" text-2xl sm:text-4xl text-left sm:text-left font-extralight">
                         <motion.b
                             className="text-4xl sm:text-6xl text-white"
                             whileHover={{ color: 'orange' }}
@@ -102,7 +95,7 @@ const Services = () => {
                 className="flex-2 flex flex-col justify-center items-center max-w-7xl"
                 variants={variants}
             >
-                <motion.div className="  flex-1 flex flex-col sm:flex-row max-w-6xl justify-between border-solid">
+                <motion.div className="  flex-1 flex flex-col sm:flex-row max-w-6xl justify-between">
                     <motion.div className="flex-1 px-5 leading-relaxed my-3 bg-transparent hidden sm:flex sm:flex-col">
                         <p className="my-3">
                             Après une première carrière dans le contrôle de
