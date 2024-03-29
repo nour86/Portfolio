@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 function Header() {
     return (
-        <header className="h-24 relative top-24 z-10 flex justify-end lg:justify-center ">
+        <header className="h-24 relative top-24 z-10 flex justify-end lg:justify-center bg-slate-800 ">
             <div className=" w-3/4 flex flex-row items-center justify-between px-6 h-full">
                 <motion.div
                     initial={{ opacity: 0, scale: 0.5 }}

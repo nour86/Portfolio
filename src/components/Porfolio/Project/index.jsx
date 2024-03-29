@@ -46,7 +46,7 @@ const Project = ({ project }) => {
         <motion.section
             name="portfolio-container"
             className={` h-screen w-[100vw] snap-center ${
-                isIdEven ? 'bg-gradient-to-b' : 'bg-gradient-to-t'
+                isIdEven ? 'bg-gradient-to-t' : 'bg-gradient-to-b'
             } from-slate-950 to-slate-800 flex items-center overflow-hidden relative`}
         >
             {/* for position ref */}

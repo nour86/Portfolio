@@ -16,7 +16,7 @@ function ProjectExpanded({ project }) {
                 duration: 0.5,
             }}
             exit={{ opacity: 0, scale: 0, x: '100%' }}
-            className="z-10 absolute flex items-center justify-center self-end w-[100vw] h-5/6 "
+            className="z-10 absolute flex items-center justify-center self-end w-[100vw] h-5/6 max-h-[1000px] "
         >
             <motion.div className="w-full h-full md:w-5/6 max-w-screen-xl grid grid-cols-10 gap-x-3 ">
                 <div
@@ -48,12 +48,12 @@ function ProjectExpanded({ project }) {
                 </div>
 
                 <motion.div className="col-span-10 row-span-2 md:col-span-4 md:row-span-5 lg:col-span-5 lg:row-span-5  ">
-                    <div className="flex flex-col gap-5 m-6 md:ml-12 ">
+                    <div className="flex flex-col gap-5 m-6">
                         <h3 className="text-xl md:text-2xl bg-transparent text-gray-500">
                             {project.subtitle}
                         </h3>
 
-                        <div className=" flex md:flex-row w-full justify-between">
+                        <div className=" flex md:flex-row w-full justify-between  overflow-auto">
                             <ul className="list-disc md:m-3">
                                 {project.description?.map(
                                     (paragraph, index) => {
@@ -69,7 +69,7 @@ function ProjectExpanded({ project }) {
                                 )}
                             </ul>
                         </div>
-                        <div className="flex flex-row flex-wrap items-center gap-2">
+                        <div className="flex flex-row flex-wrap items-center self-baseline gap-2">
                             {project.technos.map((techno, index) => {
                                 return (
                                     <img
@@ -84,7 +84,7 @@ function ProjectExpanded({ project }) {
                 </motion.div>
 
                 <div className="col-span-10 row-span-1 md:col-span-6 md:row-span-2 lg:col-span-5 lg:row-span-2  ">
-                    <div className="flex flex-wrap gap-6 h-full justify-evenly items-center">
+                    <div className="flex flex-wrap gap-6 h-full justify-evenly items-start">
                         {project.website && (
                             <motion.button whileHover={{ scale: 0.9 }}>
                                 <Link

@@ -35,7 +35,7 @@ html {
 
 body {
     color: lightgray;
-    background-color: #0c0c1d;
+    background-color: #1e293b;
     overflow-x: hidden;
     @screen md {
         font-size: 1rem;

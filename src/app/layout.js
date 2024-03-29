@@ -4,6 +4,7 @@ import './globals.css'
 import { Suspense } from 'react'
 import Loading from './loading'
 import Page from './page'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,6 +25,7 @@ export default function RootLayout() {
                 <Suspense fallback={<Loading />}>
                     <Page />
                 </Suspense>
+                <Footer />
             </body>
         </html>
     )

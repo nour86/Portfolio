@@ -16,9 +16,9 @@ function ProjectPreview({ project, expanded, handler, y, variants }) {
             exit={{ opacity: 0, x: '-100%' }}
             className=" flex items-center justify-center self-end w-full h-5/6"
         >
-            <div className="w-full md:w-3/4 max-w-screen-xl flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-8 h-fulloverflow-hidden ">
+            <div className="w-full sm:w-3/4 max-w-screen-lg flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-8 h-fulloverflow-hidden ">
                 {/* imageContainer */}
-                <div className=" relative flex flex-1 max-w-screen-sm md:flex-2 h-full p-4 items-center object-cover">
+                <div className=" relative mx-4 flex flex-1 max-w-screen-sm md:flex-2 h-full p-4 items-center object-cover">
                     <img
                         src={project.cover}
                         alt={`${project.title} cover`}
@@ -26,7 +26,7 @@ function ProjectPreview({ project, expanded, handler, y, variants }) {
                     />
                 </div>
                 {/* text container */}
-                <div className="flex flex-1 h-full max-w-screen-md justify-start items-start lg:items-center ">
+                <div className="flex flex-1 h-full max-w-96 justify-start items-start lg:items-center ">
                     <motion.div
                         className="flex-1 flex flex-col gap-4 justify-center lg:items-start overflow-none"
                         style={{ y }}

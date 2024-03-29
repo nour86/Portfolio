@@ -43,7 +43,7 @@ const sliderVariants = {
 
 function Hero() {
     return (
-        <section className=" h-screen w-full snap-center overflow-hidden relative bg-gradient-to-b from-slate-950 to-slate-800">
+        <section className=" h-[calc(100vh)] w-full snap-center overflow-hidden relative bg-gradient-to-b from-slate-950 to-slate-800">
             <div className="max-w-7xl m-auto h-full">
                 <motion.div
                     className=" p-4 h-full w-full items-center flex flex-col justify-center gap- "
@@ -69,18 +69,32 @@ function Hero() {
                         variants={textVariants}
                         className="flex flex-col sm:flex-row gap-5 mt-5"
                     >
-                        <motion.button
-                            variants={textVariants}
-                            className=" p-5 border-2 border-solid border-white rounded-xl bg text-white cursor-pointer z-10"
-                        >
-                            see the latest works
-                        </motion.button>
-                        <motion.button
-                            variants={textVariants}
-                            className=" p-5 border-2 border-solid border-white rounded-xl bg text-white cursor-pointer z-10"
-                        >
-                            Contact
-                        </motion.button>
+                        <a href="#Portfolio">
+                            <motion.button
+                                variants={textVariants}
+                                className=" p-5 border-2 border-solid border-white rounded-xl bg text-white cursor-pointer z-10"
+                                whileHover={{
+                                    scale: 0.9,
+                                    color: 'black',
+                                    background: 'white',
+                                }}
+                            >
+                                mes derniers projets
+                            </motion.button>
+                        </a>
+                        <a href="#Contact">
+                            <motion.button
+                                variants={textVariants}
+                                className=" p-5 border-2 border-solid border-white rounded-xl bg text-white cursor-pointer z-10"
+                                whileHover={{
+                                    scale: 0.9,
+                                    color: 'black',
+                                    background: 'white',
+                                }}
+                            >
+                                Contact
+                            </motion.button>
+                        </a>
                     </motion.div>
                     <motion.img
                         variants={textVariants}

@@ -1,30 +1,6 @@
 export const myProjects = [
     {
         id: 1,
-        title: 'Booki',
-        logo: './sites/pictures/booki/booki_logo.svg',
-        cover: 'https://picsum.photos/id/237/536/354',
-        preview:
-            "Création de la page d'accueil d'une agence de voyage avec HTML & CSS",
-        subtitle:
-            "OpenClassrooms P3 - Création de la page d'accueil d'une agence de voyage avec HTML & CSS",
-        diapo: [
-            { title: 'cover', img: './sites/pictures/booki/bookicover.webp' },
-            { title: 'picture 1', img: './sites/pictures/booki/booki2.webp' },
-            { title: 'picture 2', img: './sites/pictures/booki/booki3.webp' },
-            { title: 'picture 3', img: './sites/pictures/booki/booki4.webp' },
-        ],
-        technos: ['html5', 'css3'],
-        description: [
-            'premier paragraphe',
-            'second paragraphe',
-            'troisième paragraphe',
-        ],
-        repo: 'https://github.com/nour86/booki',
-        website: 'https://nour86.github.io/booki/',
-    },
-    {
-        id: 2,
         title: 'Kaza',
         logo: './sites/pictures/kasa/kasa_logo.svg',
         cover: './sites/pictures/kasa/kasacover.webp',
@@ -49,7 +25,7 @@ export const myProjects = [
         repo: 'https://github.com/nour86/Kasa',
     },
     {
-        id: 3,
+        id: 2,
         title: 'ohmyfood',
         logo: './sites/pictures/ohmyfood/ohmyfood_logo.svg',
         cover: './sites/pictures/ohmyfood/ohmyfoodcover.webp',
@@ -84,7 +60,7 @@ export const myProjects = [
         website: 'https://nour86.github.io/Ohmyfood/',
     },
     {
-        id: 4,
+        id: 3,
         title: 'sophie buel',
         logo: './sites/pictures/sophie_bluel/sophiebluel_logo.svg',
         cover: './sites/pictures/sophie_bluel/sophiebluelcover.webp',
@@ -118,7 +94,7 @@ export const myProjects = [
         repo: 'https://github.com/nour86/portfolio_frontend',
     },
     {
-        id: 5,
+        id: 4,
         title: 'Nina Carducci',
         logo: './sites/pictures/nina_carducci/nina_logo.svg',
         cover: './sites/pictures/nina_carducci/ninacover.webp',
@@ -157,7 +133,7 @@ export const myProjects = [
         repo: 'https://github.com/nour86/nina_carducci',
     },
     {
-        id: 6,
+        id: 5,
         title: 'Argent Bank',
         logo: './sites/pictures/argent_bank/argentbank_logo.svg',
         cover: './sites/pictures/argent_bank/argentbankcover.webp',

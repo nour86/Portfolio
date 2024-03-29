@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 
-const items = ['About', 'Services', 'Portfolio', 'Contact']
+const items = ['About', 'Portfolio', 'Contact']
 
 const variants = {
     open: {

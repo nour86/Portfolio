@@ -52,7 +52,11 @@ const Contact = () => {
     }
 
     return (
-        <section className="h-screen w-full snap-center" id="Contact">
+        <section
+            className="h-screen w-full snap-center bg-gradient-to-b
+from-slate-950 to-slate-800"
+            id="Contact"
+        >
             <motion.div
                 ref={ref}
                 className="w-full p-2 flex flex-col sm:max-w-7xl sm:flex-row h-full m-auto justify-center items-center items gap-11"
@@ -72,17 +76,7 @@ const Contact = () => {
                     </motion.h1>
                     <motion.div className="item" variants={variants}>
                         <h2>Mail</h2>
-                        <span className="font-light">hello@react.dev</span>
-                    </motion.div>
-                    <motion.div className="item" variants={variants}>
-                        <h2>Address</h2>
-                        <span className="font-light">
-                            Hello street New York
-                        </span>
-                    </motion.div>
-                    <motion.div className="item" variants={variants}>
-                        <h2>Phone</h2>
-                        <span className="font-light">+1 234 5678</span>
+                        <span className="font-light">n.alchami@gmail.com</span>
                     </motion.div>
                 </motion.div>
                 <div className="flex-1 relative p-11 w-full sm:p-0 sm:w-fit">
@@ -148,8 +142,8 @@ const Contact = () => {
                             name="message"
                             required
                         />
-                        <button className="p-3 sm:p-5 border-none bg-orange-500 cursor-pointer font-medium">
-                            Submit
+                        <button className="p-3 sm:p-5 border-none bg-orange-400 cursor-pointer rounded-md font-medium">
+                            Envoyer!
                         </button>
                         {error && 'Error'}
                         {success &&
