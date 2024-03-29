@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import Project from '@/components/Porfolio/Project'
-import TechnoUsed from '@/components/Porfolio/Project/DisplayTechnos'
+import TechnoUsed from '@/components/Services/DisplayTechnos'
 
 const booki = {
     id: 2,

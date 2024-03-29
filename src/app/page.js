@@ -21,11 +21,8 @@ export default function Page() {
             </Section> */}
             <Services />
             <Parallax type="portfolio" />
-            <Portfolio>
-                <Kasa />
-                <Booki />
-                <Ohmyfood />
-            </Portfolio>
+            <Portfolio />
+
             <Contact />
             <Test />
         </main>

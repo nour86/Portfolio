@@ -4,7 +4,7 @@ import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
 import './style.css'
-import DisplayTechnos from '../Porfolio/Project/DisplayTechnos'
+import DisplayTechnos from './DisplayTechnos'
 
 const variants = {
     initial: {
