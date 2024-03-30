@@ -19,15 +19,21 @@ const Portfolio = () => {
     const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 })
 
     return (
-        <section className="max-w-7xl bg-slate-200 h-full">
-            <div className="relative w-full" ref={ref}>
-                <div className="sticky top-0 h-1/6 left-0 pt-4 flex flex-col max-w-7xl justify-center z-30">
+        <section
+            className="flex flex-col justify-center items-center h-full"
+            id="Portfolio"
+        >
+            <div
+                className="flex flex-col max-w-6xl items-center  justify-center relative w-full p-3 sm:p-10"
+                ref={ref}
+            >
+                <div className="sticky top-0 h-1/6 flex flex-col w-full justify-center z-30">
                     <div className="absolute w-full h-full">
                         <ParticlesBackground />
                     </div>
                     <div
                         name="text-container"
-                        className="flex-2 flex self-end text-end justify-end items-center max-w-screen-lg gap-5 my-6 sm:mx-10"
+                        className="flex-2 flex self-end text-end justify-end items-center max-w-screen-lg gap-5 my-6 "
                     >
                         <p className=" font-light text-l sm:text-2xl text-gray-400 right-0">
                             Mes derniers projets

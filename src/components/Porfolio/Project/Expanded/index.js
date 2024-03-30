@@ -1,24 +1,32 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
 
 import Slider from './../Slider'
 
-function ProjectExpanded({ project }) {
+function ProjectExpanded({ project, handler }) {
     return (
         <motion.article
             key={`details${project.title}`}
             initial={{ opacity: 0, scale: 0, x: '100%', y: '30%' }}
             animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
             transition={{
-                ease: 'easeOut',
-                duration: 0.5,
+                type: 'spring',
+                stiffness: 100,
+                damping: 20,
             }}
             exit={{ opacity: 0, scale: 0, x: '100%' }}
             className="z-10 absolute flex items-center justify-center self-end w-[100vw] h-5/6 max-h-[1000px] "
         >
-            <motion.div className="w-full h-full md:w-5/6 max-w-screen-xl grid grid-cols-10 gap-x-3 ">
+            <motion.button
+                whileHover={{ scale: 0.9 }}
+                className="absolute top-[5vh] sm:top-1/3 left-4 sm:left-6 rounded-full w-16 h-16 bg-orange-400 z-40 text-black "
+                onClick={() => handler(false)}
+            >
+                back
+            </motion.button>
+            <motion.div className="w-full h-full md:w-5/6 max-w-screen-xl grid grid-cols-10 gap-x-3">
                 <div
                     name="diapo-grid"
                     className=" col-span-10 row-span-2 md:col-span-6 md:row-span-3 lg:col-span-5 lg:row-span-3 "
@@ -89,7 +97,7 @@ function ProjectExpanded({ project }) {
                         {project.website && (
                             <motion.button whileHover={{ scale: 0.9 }}>
                                 <Link
-                                    className="bg-yellow-500 text-black px-3 flex items-center justify-evenly border-none rounded-xl p-3 w-24 sm:w-48 lg:w-60 h-12 cursor-pointer"
+                                    className="bg-orange-400 text-black px-3 flex items-center justify-evenly border-none rounded-xl p-3 w-24 sm:w-48 lg:w-60 h-12 cursor-pointer"
                                     href={project.repo}
                                     target="blank"
                                 >
@@ -103,7 +111,7 @@ function ProjectExpanded({ project }) {
                         )}
                         <motion.button whileHover={{ scale: 0.9 }}>
                             <Link
-                                className="bg-yellow-500 text-black px-3 flex items-center justify-evenly border-none rounded-xl p-3  w-24 sm:w-48 lg:w-60 h-12 cursor-pointer"
+                                className="bg-orange-400 text-black px-3 flex items-center justify-evenly border-none rounded-xl p-3  w-24 sm:w-48 lg:w-60 h-12 cursor-pointer"
                                 href={project.repo}
                                 target="blank"
                             >

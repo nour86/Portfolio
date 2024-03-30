@@ -53,7 +53,7 @@ const Contact = () => {
 
     return (
         <section
-            className="h-screen w-full flex items-center relative snap-center bg-gradient-to-b
+            className=" w-full flex items-center relative snap-center bg-gradient-to-b
 from-slate-950 to-slate-800"
             id="Contact"
         >
@@ -79,7 +79,7 @@ from-slate-950 to-slate-800"
                         <span className="font-light">n.alchami@gmail.com</span>
                     </motion.div>
                 </motion.div>
-                <div className="flex-1 h-2/3 flex flex-col w-full items-center justify-center relative p-6 max-w-screen-sm">
+                <div className="flex-1 flex flex-col w-full items-center justify-center relative p-6 max-w-screen-sm">
                     {/* <motion.div
                         className=" stroke-white absolute m-auto -z-10"
                         initial={{ opacity: 1 }}
@@ -138,7 +138,7 @@ from-slate-950 to-slate-800"
                             aria-label="email"
                         />
                         <textarea
-                            rows={6}
+                            rows={4}
                             className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
                             placeholder="Message"
                             name="message"
@@ -147,7 +147,7 @@ from-slate-950 to-slate-800"
                         />
                         <button
                             name="envoyer l'email"
-                            className="p-3 sm:p-5 border-none bg-orange-400 cursor-pointer rounded-md font-medium"
+                            className="p-3 sm:p-5 border-none bg-orange-400 text-black cursor-pointer rounded-md font-medium"
                         >
                             Envoyer!
                         </button>

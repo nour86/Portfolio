@@ -2,7 +2,13 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 
-import { motion, useScroll, useTransform, useInView } from 'framer-motion'
+import {
+    motion,
+    useScroll,
+    useTransform,
+    useInView,
+    AnimatePresence,
+} from 'framer-motion'
 
 import ProjectPreview from './Preview'
 import ProjectExpanded from './Expanded'
@@ -62,7 +68,11 @@ const Project = ({ project }) => {
                 variants={variants}
                 y={y}
             />
-            {expanded && <ProjectExpanded project={project} />}
+            <AnimatePresence>
+                {expanded && (
+                    <ProjectExpanded project={project} handler={setExpanded} />
+                )}
+            </AnimatePresence>
         </motion.section>
     )
 }

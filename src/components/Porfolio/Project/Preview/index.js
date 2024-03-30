@@ -10,8 +10,9 @@ function ProjectPreview({ project, expanded, handler, y, variants }) {
             animate={expanded ? 'expanded' : { opacity: 1, x: 0 }}
             variants={variants}
             transition={{
-                ease: 'easeOut',
-                duration: 0.5,
+                type: 'spring',
+                stiffness: 200,
+                damping: 20,
             }}
             exit={{ opacity: 0, x: '-100%' }}
             className=" flex items-center justify-center self-end w-full h-5/6"
@@ -19,10 +20,12 @@ function ProjectPreview({ project, expanded, handler, y, variants }) {
             <div className="w-full sm:w-3/4 max-w-screen-lg flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-8 h-fulloverflow-hidden ">
                 {/* imageContainer */}
                 <div className=" relative mx-4 flex flex-1 max-w-screen-sm md:flex-2 h-full p-4 items-center object-cover">
-                    <img
+                    <motion.img
                         src={project.cover}
                         alt={`${project.title} cover`}
-                        className="w-full max-w-screen-sm m-auto md: object-cover rounded-xl"
+                        className="w-full max-w-screen-sm m-auto md: object-cover rounded-xl hover:cursor-pointer"
+                        whileHover={{ scale: 1.02 }}
+                        onClick={() => handler(true)}
                     />
                 </div>
                 {/* text container */}
@@ -37,12 +40,13 @@ function ProjectPreview({ project, expanded, handler, y, variants }) {
                         <div className="px-2  max-w-md ">
                             <p>{project.preview}</p>
                         </div>
-                        <button
-                            className="bg-yellow-500 text-black border-none rounded-xl p-3 w-64  cursor-pointer self-center lg:self-start"
+                        <motion.button
+                            className="bg-orange-400 text-black border-none rounded-xl p-3 w-64  cursor-pointer self-center lg:self-start"
                             onClick={() => handler(true)}
+                            whileHover={{ scale: 0.9 }}
                         >
                             See more
-                        </button>
+                        </motion.button>
                     </motion.div>
                 </div>
             </div>
