@@ -1,31 +1,6 @@
 export const myProjects = [
     {
         id: 1,
-        title: 'Kaza',
-        logo: './sites/pictures/kasa/kasa_logo.svg',
-        cover: './sites/pictures/kasa/kasacover.webp',
-        preview: 'Créer une application avec React',
-        subtitle:
-            "OpenClassRoom projet - 8 Développer l'ensemble de l'application en utilisant : ",
-        technos: ['html5', 'css3', 'javascript', 'reactjs'],
-        diapo: [
-            { title: 'cover', img: './sites/pictures/kasa/kasacover.webp' },
-            { title: 'picture 1', img: './sites/pictures/kasa/kasa1.webp' },
-            { title: 'picture 2', img: './sites/pictures/kasa/kasa2.webp' },
-            { title: 'picture 3', img: './sites/pictures/kasa/kasa3.webp' },
-            { title: 'picture 4', img: './sites/pictures/kasa/kasa4.webp' },
-        ],
-        description: [
-            'logique de components React',
-            'utilisation des hooks useState, useEffect, useContext',
-            "Gestion des routes de l'application avec React router",
-            'conditional rendering',
-            'animation css et @mixin pour le responsive design',
-        ],
-        repo: 'https://github.com/nour86/Kasa',
-    },
-    {
-        id: 2,
         title: 'ohmyfood',
         logo: './sites/pictures/ohmyfood/ohmyfood_logo.svg',
         cover: './sites/pictures/ohmyfood/ohmyfoodcover.webp',
@@ -60,7 +35,7 @@ export const myProjects = [
         website: 'https://nour86.github.io/Ohmyfood/',
     },
     {
-        id: 3,
+        id: 2,
         title: 'sophie buel',
         logo: './sites/pictures/sophie_bluel/sophiebluel_logo.svg',
         cover: './sites/pictures/sophie_bluel/sophiebluelcover.webp',
@@ -94,7 +69,7 @@ export const myProjects = [
         repo: 'https://github.com/nour86/portfolio_frontend',
     },
     {
-        id: 4,
+        id: 3,
         title: 'Nina Carducci',
         logo: './sites/pictures/nina_carducci/nina_logo.svg',
         cover: './sites/pictures/nina_carducci/ninacover.webp',
@@ -131,6 +106,31 @@ export const myProjects = [
             "ajout d'un google rich snippet",
         ],
         repo: 'https://github.com/nour86/nina_carducci',
+    },
+    {
+        id: 4,
+        title: 'Kaza',
+        logo: './sites/pictures/kasa/kasa_logo.svg',
+        cover: './sites/pictures/kasa/kasacover.webp',
+        preview: 'Créer une application avec React',
+        subtitle:
+            "OpenClassRoom projet - 8 Développer l'ensemble de l'application en utilisant : ",
+        technos: ['html5', 'css3', 'javascript', 'reactjs'],
+        diapo: [
+            { title: 'cover', img: './sites/pictures/kasa/kasacover.webp' },
+            { title: 'picture 1', img: './sites/pictures/kasa/kasa1.webp' },
+            { title: 'picture 2', img: './sites/pictures/kasa/kasa2.webp' },
+            { title: 'picture 3', img: './sites/pictures/kasa/kasa3.webp' },
+            { title: 'picture 4', img: './sites/pictures/kasa/kasa4.webp' },
+        ],
+        description: [
+            'logique de components React',
+            'utilisation des hooks useState, useEffect, useContext',
+            "Gestion des routes de l'application avec React router",
+            'conditional rendering',
+            'animation css et @mixin pour le responsive design',
+        ],
+        repo: 'https://github.com/nour86/Kasa',
     },
     {
         id: 5,

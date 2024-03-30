@@ -33,7 +33,7 @@ const ParticlesBackground = () => {
         init && (
             <Particles
                 id="tsparticles"
-                particlesLoaded={particlesLoaded}
+                // particlesLoaded={particlesLoaded}
                 options={config}
             />
         )

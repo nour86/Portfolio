@@ -20,9 +20,6 @@ const variants = {
 }
 
 const Contact = () => {
-    const service = process.env.SERVICE_ID
-    console.log(service)
-
     const ref = useRef()
     const formRef = useRef()
     const [error, setError] = useState(false)
