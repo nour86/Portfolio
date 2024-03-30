@@ -16,15 +16,20 @@ function Header() {
                     Nour Dev
                 </motion.div>
                 <div className="icons flex gap-5 ">
-                    <a href="https://github.com/nour86" target="blank">
+                    <motion.a
+                        whileHover={{ scale: 1.2 }}
+                        href="https://github.com/nour86"
+                        target="blank"
+                    >
                         <Image
                             src="/logos/githubdark.svg"
                             width={24}
                             height={24}
                             alt="logo github"
                         />
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
+                        whileHover={{ scale: 1.2 }}
                         href="https://www.codewars.com/users/roun86"
                         target="blank"
                     >
@@ -34,8 +39,9 @@ function Header() {
                             height={24}
                             alt=" logo codewar"
                         />
-                    </a>
-                    <a
+                    </motion.a>
+                    <motion.a
+                        whileHover={{ scale: 1.2 }}
                         href="https://www.linkedin.com/in/nour-alchami-21b10a221/"
                         target="blank"
                     >
@@ -45,7 +51,7 @@ function Header() {
                             height={24}
                             alt="logo linkedin"
                         />
-                    </a>
+                    </motion.a>
                 </div>
             </div>
         </header>

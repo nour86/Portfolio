@@ -53,7 +53,7 @@ function Hero() {
                 >
                     <motion.h2
                         variants={textVariants}
-                        className=" text-4xl text-purple-950 tracking-[0.5rem] m-9"
+                        className=" text-6xl text-purple-600 tracking-[0.5rem] m-9"
                     >
                         Nour Alchami
                     </motion.h2>
@@ -94,7 +94,7 @@ function Hero() {
                                     background: 'white',
                                 }}
                             >
-                                Contact
+                                Contactez moi
                             </motion.button>
                         </a>
                     </motion.div>

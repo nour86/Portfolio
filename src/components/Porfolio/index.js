@@ -40,7 +40,6 @@ const Portfolio = () => {
                         </h2>
                         <hr className="w[10vw] sm:w-[30vw]  border-t border-solid border-gray-400" />
                     </div>
-                    {/* <h2 id="Portfolio">My Works</h2> */}
                     <motion.div
                         style={{ scaleX }}
                         className=" h-1.5 bg-white border-none rounded-full mt-2"

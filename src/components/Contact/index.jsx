@@ -75,7 +75,7 @@ from-slate-950 to-slate-800"
                         Ecrivez moi !
                     </motion.h2>
                     <motion.div className="item" variants={variants}>
-                        <h2>Mail</h2>
+                        <h3>Mail</h3>
                         <span className="font-light">n.alchami@gmail.com</span>
                     </motion.div>
                 </motion.div>
