@@ -57,6 +57,7 @@ const Links = ({ handler }) => {
                     height={24}
                     className="h-10 w-10 sm:h-12 sm:w-12 hover:opacity-80 hover:translate-y-1"
                     src="./logos/github.svg"
+                    alt="logo github"
                 />
             </motion.a>
         </motion.div>

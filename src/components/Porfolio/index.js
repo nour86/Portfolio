@@ -19,13 +19,22 @@ const Portfolio = () => {
     const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 })
 
     return (
-        <section>
+        <section className="max-w-7xl bg-slate-200 h-full">
             <div className="relative w-full" ref={ref}>
-                <div className="sticky top-0 h-1/6 left-0 pt-4 text-center text-orange-400 text-6xl z-30 bg-transparent">
-                    <div className="absolute w-full h-16">
+                <div className="sticky top-0 h-1/6 left-0 pt-4 flex flex-col max-w-7xl justify-center z-30">
+                    <div className="absolute w-full h-full">
                         <ParticlesBackground />
                     </div>
-                    <h2 id="Portfolio">My Works</h2>
+                    <div
+                        name="text-container"
+                        className="flex-2 flex self-end text-end justify-end items-center max-w-screen-lg gap-5 my-6 sm:mx-10"
+                    >
+                        <p className=" font-light text-l sm:text-2xl text-gray-400 right-0">
+                            Mes derniers projets
+                        </p>
+                        <hr className="w[10vw] sm:w-[30vw]  border-t border-solid border-gray-400" />
+                    </div>
+                    {/* <h2 id="Portfolio">My Works</h2> */}
                     <motion.div
                         style={{ scaleX }}
                         className=" h-1.5 bg-white border-none rounded-full mt-2"
@@ -35,6 +44,7 @@ const Portfolio = () => {
                     <img
                         className="object-contain"
                         src="/background/stars.png"
+                        alt="background stars"
                     ></img>
                 </div>
 

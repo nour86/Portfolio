@@ -53,42 +53,42 @@ const Contact = () => {
 
     return (
         <section
-            className="h-screen w-full snap-center bg-gradient-to-b
+            className="h-screen w-full flex items-center relative snap-center bg-gradient-to-b
 from-slate-950 to-slate-800"
             id="Contact"
         >
+            <div className=" absolute w-full h-10" ref={ref}></div>
             <motion.div
-                ref={ref}
-                className="w-full p-2 flex flex-col sm:max-w-7xl sm:flex-row h-full m-auto justify-center items-center items gap-11"
+                className="w-full h-full p-2 flex flex-col sm:max-w-7xl m-auto items-center justify-center  gap-11"
                 variants={variants}
                 initial="initial"
                 whileInView="animate"
             >
                 <motion.div
-                    className=" flex-1 flex flex-col h-2/3 text-center items-center sm:gap-10 mt-16 sm:mt-0"
+                    className=" flex-1 flex flex-col text-center items-center  mt-8 sm:gap-10 "
                     variants={variants}
                 >
                     <motion.h1
                         variants={variants}
                         className=" text-3xl sm:text-6xl leading-[80px] "
                     >
-                        Let’s work together
+                        Ecrivez moi !
                     </motion.h1>
                     <motion.div className="item" variants={variants}>
                         <h2>Mail</h2>
                         <span className="font-light">n.alchami@gmail.com</span>
                     </motion.div>
                 </motion.div>
-                <div className="flex-1 relative p-11 w-full sm:p-0 sm:w-fit">
-                    <motion.div
-                        className=" stroke-orange-500 absolute m-auto -z-10"
+                <div className="flex-1 h-2/3 flex flex-col w-full items-center justify-center relative p-6 max-w-screen-sm">
+                    {/* <motion.div
+                        className=" stroke-white absolute m-auto -z-10"
                         initial={{ opacity: 1 }}
                         whileInView={{ opacity: 0 }}
-                        transition={{ delay: 3, duration: 1 }}
+                        transition={{ delay: 3, duration: 3 }}
                     >
                         <svg
-                            width="250px"
-                            height="250px"
+                            width="400px"
+                            height="400px"
                             viewBox="0 0 32.666 32.666"
                         >
                             <motion.path
@@ -96,7 +96,7 @@ from-slate-950 to-slate-800"
                                 fill="none"
                                 initial={{ pathLength: 0 }}
                                 animate={isInView && { pathLength: 1 }}
-                                transition={{ duration: 1.5 }}
+                                transition={{ duration: 1 }}
                                 d="M28.189,16.504h-1.666c0-5.437-4.422-9.858-9.856-9.858l-0.001-1.664C23.021,4.979,28.189,10.149,28.189,16.504z
             M16.666,7.856L16.665,9.52c3.853,0,6.983,3.133,6.981,6.983l1.666-0.001C25.312,11.735,21.436,7.856,16.666,7.856z M16.333,0
             C7.326,0,0,7.326,0,16.334c0,9.006,7.326,16.332,16.333,16.332c0.557,0,1.007-0.45,1.007-1.006c0-0.559-0.45-1.01-1.007-1.01
@@ -112,20 +112,21 @@ from-slate-950 to-slate-800"
             C32.666,7.326,25.339,0,16.333,0z"
                             />
                         </svg>
-                    </motion.div>
+                    </motion.div> */}
                     <motion.form
-                        className="flex flex-col gap-5"
+                        className="w-full sm:w-3/4 flex flex-col gap-5"
                         ref={formRef}
                         onSubmit={sendEmail}
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        transition={{ delay: 2.5, duration: 1 }}
+                        transition={{ delay: 1, duration: 2 }}
                     >
                         <input
                             className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
                             type="text"
                             placeholder="Name"
                             name="user_name"
+                            aria-label="name"
                             required
                         />
                         <input
@@ -134,20 +135,24 @@ from-slate-950 to-slate-800"
                             required
                             placeholder="Email"
                             name="user_email"
+                            aria-label="email"
                         />
                         <textarea
-                            rows={8}
+                            rows={6}
                             className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
                             placeholder="Message"
                             name="message"
+                            aria-label="message"
                             required
                         />
-                        <button className="p-3 sm:p-5 border-none bg-orange-400 cursor-pointer rounded-md font-medium">
+                        <button
+                            name="envoyer l'email"
+                            className="p-3 sm:p-5 border-none bg-orange-400 cursor-pointer rounded-md font-medium"
+                        >
                             Envoyer!
                         </button>
                         {error && 'Error'}
-                        {success &&
-                            'Merci ! je vous recontacte dans les plus brefs délais!'}
+                        {success && 'Merci ! je vous contacte au plus vite!'}
                     </motion.form>
                 </div>
             </motion.div>

@@ -71,6 +71,7 @@ function Hero() {
                     >
                         <a href="#Portfolio">
                             <motion.button
+                                aria-label="lien vers mes projets"
                                 variants={textVariants}
                                 className=" p-5 border-2 border-solid border-white rounded-xl bg text-white cursor-pointer z-10"
                                 whileHover={{
@@ -84,6 +85,7 @@ function Hero() {
                         </a>
                         <a href="#Contact">
                             <motion.button
+                                aria-label="contactez moi"
                                 variants={textVariants}
                                 className=" p-5 border-2 border-solid border-white rounded-xl bg text-white cursor-pointer z-10"
                                 whileHover={{
@@ -101,7 +103,7 @@ function Hero() {
                         animate="scrollButton"
                         className=" w-12 mt-12"
                         src="/scroll.png"
-                        alt=""
+                        alt="icone scroll down"
                     ></motion.img>
                 </motion.div>
             </div>
