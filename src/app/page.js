@@ -10,15 +10,9 @@ export default function Page() {
         <main>
             <Sidebar />
             <Hero />
-            {/* <Section id="Services">
-                <Parallax type="services" />
-            </Section> */}
             <About />
-            {/* <Parallax type="portfolio" /> */}
             <Portfolio />
-
             <Contact />
-            {/* <Test /> */}
         </main>
     )
 }

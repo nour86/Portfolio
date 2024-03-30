@@ -29,8 +29,6 @@
 }
 html {
     scroll-snap-type: y mandatory;
-
-    /* text-align: justify; */
 }
 
 body {

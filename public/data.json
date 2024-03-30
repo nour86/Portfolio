@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "title": "ohmyfood",
+        "title": "Ohmyfood",
         "logo": "./sites/pictures/ohmyfood/ohmyfood_logo.svg",
         "cover": "./sites/pictures/ohmyfood/ohmyfoodcover.webp",
         "preview": "Développer un site mobile first qui répertorie les menus de restaurants gastronomiques",
@@ -35,7 +35,7 @@
     },
     {
         "id": 2,
-        "title": "sophie buel",
+        "title": "Sophie Bluel",
         "logo": "./sites/pictures/sophie_bluel/sophiebluel_logo.svg",
         "cover": "./sites/pictures/sophie_bluel/sophiebluelcover.webp",
         "preview": "Conception du site portfolio d'une architecte d'intérieur",

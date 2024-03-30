@@ -35,7 +35,7 @@ const Footer = () => {
                 </a>{' '}
             </span>
             <span>
-                et hébergé sur
+                hébergé sur
                 <a
                     href="https://netlify.com/"
                     rel="nofollow noopener noreferrer"

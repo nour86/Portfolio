@@ -1,15 +1,31 @@
 'use client'
 
-import React, { useRef } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 
 import { motion, useScroll, useSpring } from 'framer-motion'
 
-import { myProjects } from '@/content'
 import Project from './Project'
-import Parallax from '../Parallax'
 import ParticlesBackground from '../Particles'
 
 const Portfolio = () => {
+    const [jsonData, setJsonData] = useState(null)
+
+    useEffect(() => {
+        const fetchData = async () => {
+            // await new Promise((resolve) => setTimeout(resolve, 3000))
+            try {
+                const response = await fetch('./data.json')
+                if (!response.ok) {
+                    throw new Error('Network response was not ok')
+                }
+                const data = await response.json()
+                setJsonData(data)
+            } catch (error) {
+                console.error('Error fetching data:', error)
+            }
+        }
+        fetchData()
+    }, [])
     const ref = useRef()
 
     const { scrollYProgress } = useScroll({
@@ -53,9 +69,13 @@ const Portfolio = () => {
                     ></img>
                 </div>
 
-                {myProjects.map((project, index) => {
-                    return <Project project={project} key={project.id} />
-                })}
+                {jsonData ? (
+                    jsonData.map((project, index) => {
+                        return <Project project={project} key={project.id} />
+                    })
+                ) : (
+                    <p> loading...</p>
+                )}
             </div>
         </section>
     )
