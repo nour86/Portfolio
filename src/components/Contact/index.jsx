@@ -68,12 +68,12 @@ from-slate-950 to-slate-800"
                     className=" flex-1 flex flex-col text-center items-center  mt-8 sm:gap-10 "
                     variants={variants}
                 >
-                    <motion.h1
+                    <motion.h2
                         variants={variants}
                         className=" text-3xl sm:text-6xl leading-[80px] "
                     >
                         Ecrivez moi !
-                    </motion.h1>
+                    </motion.h2>
                     <motion.div className="item" variants={variants}>
                         <h2>Mail</h2>
                         <span className="font-light">n.alchami@gmail.com</span>

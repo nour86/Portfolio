@@ -30,7 +30,7 @@
 html {
     scroll-snap-type: y mandatory;
 
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 body {

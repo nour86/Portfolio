@@ -70,9 +70,9 @@ const About = () => {
                     className="flex-2 flex self-end text-end items-center gap-5 mb-9"
                     variants={variants}
                 >
-                    <p className=" font-light text-xl sm:text-2xl text-gray-400 right-0">
+                    <h2 className=" font-light text-xl sm:text-2xl text-gray-400 right-0">
                         A propos de moi
-                    </p>
+                    </h2>
                     <hr className="hidden sm:block w-[30vw] border-t border-solid border-gray-400" />
                 </div>
                 <motion.div
@@ -127,7 +127,7 @@ const About = () => {
                             variants={technoVariants}
                         >
                             <motion.div variants={technoVariants}>
-                                <h2>Les technos que j'utilise</h2>
+                                <h3>Les technos que j'utilise</h3>
                                 <motion.div
                                     className="flex m-3"
                                     variants={technoVariants}
@@ -141,7 +141,7 @@ const About = () => {
                                 </motion.div>
                             </motion.div>
                             <motion.div variants={technoVariants}>
-                                <h2>j'ai aussi pu travailler avec </h2>
+                                <h3>j'ai aussi pu travailler avec </h3>
                                 <motion.div
                                     className="flex m-3"
                                     variants={technoVariants}
@@ -155,7 +155,7 @@ const About = () => {
                                 </motion.div>
                             </motion.div>
                             <motion.div variants={technoVariants}>
-                                <h2>mes outils du quotidien </h2>
+                                <h3>mes outils du quotidien </h3>
                                 <motion.div
                                     className="flex m-3"
                                     variants={technoVariants}

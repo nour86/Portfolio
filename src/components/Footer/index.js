@@ -23,7 +23,7 @@ const Footer = () => {
                 </a>{' '}
                 et{' '}
                 <a
-                    href="https://nextjs.org/"
+                    href="https://tailwindui.com/"
                     rel="nofollow noopener noreferrer"
                 >
                     <img
