@@ -42,7 +42,7 @@ function ProjectExpanded({ project, handler }) {
                         <picture>
                             <source
                                 media="(max-width: 768px)"
-                                srcSet="./diapo/macbook2.svg 768w"
+                                srcSet="./diapo/macbook.svg 768w"
                                 sizes="768px"
                             />
 

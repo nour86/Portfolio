@@ -1,5 +1,4 @@
 import Hero from '@/components/Hero'
-import Parallax from '@/components/Parallax'
 import Portfolio from '@/components/Porfolio'
 import Contact from '@/components/Contact'
 import Sidebar from '@/components/Sidebar'
