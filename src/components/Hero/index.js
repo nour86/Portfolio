@@ -101,8 +101,8 @@ function Hero() {
                     <motion.img
                         variants={textVariants}
                         animate="scrollButton"
-                        className=" w-12 mt-12"
-                        src="/scroll.png"
+                        className=" w-16 h-16 mt-16"
+                        src="/scroll.webp"
                         alt="icone scroll down"
                     ></motion.img>
                 </motion.div>
