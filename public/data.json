@@ -62,7 +62,7 @@
         "description": [
             "créer la page de présentation des travaux",
             "coder la page de connexion de l'administrateur du site (le client)",
-            "implémenter une fen^tre modale permettant au client d'ajouter et de supprimer des projets"
+            "implémenter une fenêtre modale permettant au client d'ajouter et de supprimer des projets"
         ],
         "repo": "https://github.com/nour86/portfolio_frontend"
     },

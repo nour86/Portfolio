@@ -34,18 +34,18 @@ function ProjectPreview({ project, expanded, handler, y, variants }) {
                         className="flex-1 flex flex-col gap-4 justify-center lg:items-start overflow-none"
                         style={{ y }}
                     >
-                        <h3 className="text-gray-500 text-4xl text-center lg:text-start">
+                        <h3 className="text-gray-500 text-4xl text-center sm:text-start">
                             {project.title}
                         </h3>
-                        <div className="px-2  max-w-md ">
+                        <div className="px-2 text-center max-w-md ">
                             <p>{project.preview}</p>
                         </div>
                         <motion.button
-                            className="bg-orange-400 text-black border-none rounded-xl p-3 w-64  cursor-pointer self-center lg:self-start"
+                            className="bg-orange-400 text-black border-none rounded-xl p-3 w-40 sm:w-64  cursor-pointer self-center lg:self-start"
                             onClick={() => handler(true)}
                             whileHover={{ scale: 0.9 }}
                         >
-                            See more
+                            plus d'infos...
                         </motion.button>
                     </motion.div>
                 </div>

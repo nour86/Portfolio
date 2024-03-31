@@ -32,18 +32,19 @@ const Portfolio = () => {
         target: ref,
         offset: ['end end', 'start start'],
     })
-    const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30 })
+    const scaleX = useSpring(scrollYProgress, { stiffness: 500, damping: 30 })
 
     return (
         <section
-            className="flex flex-col justify-center items-center h-full"
+            className="flex flex-col justify-center items-center h-full bg-gradient-to-b
+            from-slate-800 to-slate-950"
             id="Portfolio"
         >
             <div
-                className="flex flex-col max-w-6xl items-center  justify-center relative w-full p-3 sm:p-10"
+                className="flex flex-col max-w-6xl items-center justify-center relative w-full p-3 sm:p-10"
                 ref={ref}
             >
-                <div className="sticky top-0 h-1/6 flex flex-col w-full justify-center z-30">
+                <div className="sticky top-0 h-1/6 flex flex-col w-full justify-center z-10">
                     <div className="absolute w-full h-full">
                         <ParticlesBackground />
                     </div>

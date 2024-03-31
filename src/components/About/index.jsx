@@ -112,13 +112,13 @@ const About = () => {
                                 Paris et je me lance dans le développement web.
                             </p>
                             <p className="my-3">
-                                Féru de puzzles et de résolution d'énigmes, je
-                                peux passer des journées entières sur codewar si
-                                je ne fais pas attention...
+                                J'adore résoudre toute sorte d'énigmes :
+                                problèmes d'échecs, algorithmie.. mais aussi
+                                centrage de &#60;div &#47;&#62; ;&#41;
                             </p>
                             <p className="my-3">
                                 Je suis toujours enthousiaste à l'idée
-                                d'apprendre et de découvrir de nouvelles
+                                d'apprendre et suis à l'écoute de nouvelles
                                 opportunités dans le monde du développement web
                             </p>
                         </motion.div>
@@ -127,7 +127,7 @@ const About = () => {
                             variants={technoVariants}
                         >
                             <motion.div variants={technoVariants}>
-                                <h3>Les technos que j'utilise</h3>
+                                <h2>Les technos que j'utilise</h2>
                                 <motion.div
                                     className="flex m-3"
                                     variants={technoVariants}
@@ -141,7 +141,7 @@ const About = () => {
                                 </motion.div>
                             </motion.div>
                             <motion.div variants={technoVariants}>
-                                <h3>j'ai aussi pu travailler avec </h3>
+                                <h2>j'ai aussi pu travailler avec </h2>
                                 <motion.div
                                     className="flex m-3"
                                     variants={technoVariants}
@@ -155,7 +155,7 @@ const About = () => {
                                 </motion.div>
                             </motion.div>
                             <motion.div variants={technoVariants}>
-                                <h3>mes outils du quotidien </h3>
+                                <h2>mes outils </h2>
                                 <motion.div
                                     className="flex m-3"
                                     variants={technoVariants}

@@ -21,10 +21,14 @@ function ProjectExpanded({ project, handler }) {
         >
             <motion.button
                 whileHover={{ scale: 0.9 }}
-                className="absolute top-[5vh] sm:top-1/3 left-4 sm:left-6 rounded-full w-16 h-16 bg-orange-400 z-40 text-black "
+                className=" flex items-center justify-center absolute top-[5vh] sm:top-1/3 left-4 sm:left-6 rounded-full w-12 h-12 sm:w-16 sm:h-16 bg-orange-400 z-40 text-black  "
                 onClick={() => handler(false)}
             >
-                back
+                <img
+                    src="./left_arrow.svg"
+                    className="h-6"
+                    alt="fleche retour"
+                ></img>
             </motion.button>
             <motion.div className="w-full h-full md:w-5/6 max-w-screen-xl grid grid-cols-10 gap-x-3">
                 <div
@@ -101,10 +105,11 @@ function ProjectExpanded({ project, handler }) {
                                     href={project.repo}
                                     target="blank"
                                 >
-                                    <p className="hidden sm:inline">Visit</p>
+                                    <p className="hidden sm:inline">Voir</p>
                                     <img
                                         src={project.logo}
                                         className="h-6"
+                                        alt="logo du site"
                                     ></img>
                                 </Link>
                             </motion.button>
@@ -115,10 +120,11 @@ function ProjectExpanded({ project, handler }) {
                                 href={project.repo}
                                 target="blank"
                             >
-                                <p className="hidden sm:inline">See me repo</p>
+                                <p className="hidden sm:inline">Voir le repo</p>
                                 <img
                                     src="./logos/github.svg"
                                     className="h-6 w-6 hover:translate-y-2"
+                                    alt="logo github"
                                 ></img>
                             </Link>
                         </motion.button>
