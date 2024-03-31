@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useState } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 
 const variants = {
@@ -20,12 +20,9 @@ const variants = {
 }
 
 const Contact = () => {
-    const ref = useRef()
     const formRef = useRef()
     const [error, setError] = useState(false)
     const [success, setSuccess] = useState(false)
-
-    const isInView = useInView(ref, { margin: '-100px' })
 
     const sendEmail = (e) => {
         e.preventDefault()
@@ -54,7 +51,6 @@ const Contact = () => {
 from-slate-950 to-slate-800"
             id="Contact"
         >
-            <div className=" absolute w-full h-10" ref={ref}></div>
             <motion.div
                 className="w-full h-full p-2 flex flex-col sm:max-w-7xl m-auto items-center justify-center  gap-11"
                 variants={variants}

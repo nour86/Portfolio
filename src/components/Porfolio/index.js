@@ -12,7 +12,6 @@ const Portfolio = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            // await new Promise((resolve) => setTimeout(resolve, 3000))
             try {
                 const response = await fetch('./data.json')
                 if (!response.ok) {
