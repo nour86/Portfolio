@@ -174,7 +174,7 @@ const About = () => {
                     <div className="flex justify-between  p-5 border-solid w-full gap-9">
                         <a href="/#Contact">
                             <motion.button
-                                aria-label="contact me"
+                                aria-label="contactez moi"
                                 whileHover={{
                                     scale: 0.9,
                                     color: 'black',

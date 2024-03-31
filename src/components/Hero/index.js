@@ -73,7 +73,7 @@ function Hero() {
                             <motion.button
                                 aria-label="lien vers mes projets"
                                 variants={textVariants}
-                                className=" p-5 border-2 border-solid border-white rounded-xl bg text-white cursor-pointer z-10"
+                                className=" p-5 border-2 border-solid w-60 border-white rounded-xl text-white cursor-pointer z-10"
                                 whileHover={{
                                     scale: 0.9,
                                     color: 'black',
@@ -87,7 +87,7 @@ function Hero() {
                             <motion.button
                                 aria-label="contactez moi"
                                 variants={textVariants}
-                                className=" p-5 border-2 border-solid border-white rounded-xl bg text-white cursor-pointer z-10"
+                                className=" p-5 border-2 border-solid w-60 border-white rounded-xl text-white cursor-pointer z-10"
                                 whileHover={{
                                     scale: 0.9,
                                     color: 'black',
