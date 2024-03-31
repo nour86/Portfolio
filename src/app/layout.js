@@ -22,7 +22,7 @@ export const metadata = {
 
 export default function RootLayout() {
     return (
-        <html lang="en">
+        <html lang="fr">
             <body className={inter.className}>
                 <Header />
                 <Suspense fallback={<Loading />}>

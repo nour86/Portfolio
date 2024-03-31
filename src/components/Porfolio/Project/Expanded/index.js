@@ -1,9 +1,10 @@
 'use client'
 
-import { motion, AnimatePresence } from 'framer-motion'
-import Link from 'next/link'
+import { motion } from 'framer-motion'
 
-import Slider from './../Slider'
+import { RepoButton, WebsiteButton } from './buttons'
+
+import Slider from './Slider'
 
 function ProjectExpanded({ project, handler }) {
     return (
@@ -99,35 +100,12 @@ function ProjectExpanded({ project, handler }) {
                 <div className="col-span-10 row-span-1 md:col-span-6 md:row-span-2 lg:col-span-5 lg:row-span-2  ">
                     <div className="flex flex-wrap gap-6 h-full justify-evenly items-start">
                         {project.website && (
-                            <motion.button whileHover={{ scale: 0.9 }}>
-                                <Link
-                                    className="bg-orange-400 text-black px-3 flex items-center justify-evenly border-none rounded-xl p-3 w-24 sm:w-48 lg:w-60 h-12 cursor-pointer"
-                                    href={project.repo}
-                                    target="blank"
-                                >
-                                    <p className="hidden sm:inline">Voir</p>
-                                    <img
-                                        src={project.logo}
-                                        className="h-6"
-                                        alt="logo du site"
-                                    ></img>
-                                </Link>
-                            </motion.button>
+                            <WebsiteButton
+                                url={project.website}
+                                logo={project.logo}
+                            />
                         )}
-                        <motion.button whileHover={{ scale: 0.9 }}>
-                            <Link
-                                className="bg-orange-400 text-black px-3 flex items-center justify-evenly border-none rounded-xl p-3  w-24 sm:w-48 lg:w-60 h-12 cursor-pointer"
-                                href={project.repo}
-                                target="blank"
-                            >
-                                <p className="hidden sm:inline">Voir le repo</p>
-                                <img
-                                    src="./logos/github.svg"
-                                    className="h-6 w-6 hover:translate-y-2"
-                                    alt="logo github"
-                                ></img>
-                            </Link>
-                        </motion.button>
+                        <RepoButton url={project.repo} />
                     </div>
                 </div>
             </motion.div>

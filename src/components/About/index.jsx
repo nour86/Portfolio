@@ -5,7 +5,6 @@ import { motion, useInView } from 'framer-motion'
 
 import './style.css'
 import DisplayTechnos from './DisplayTechnos'
-import Link from 'next/link'
 
 const variants = {
     initial: {

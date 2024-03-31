@@ -37,7 +37,7 @@ function ProjectPreview({ project, expanded, handler, y, variants }) {
                         <h3 className="text-gray-500 text-4xl text-center sm:text-start">
                             {project.title}
                         </h3>
-                        <div className="px-2 text-center max-w-md ">
+                        <div className="px-2 text-center lg:text-start max-w-md ">
                             <p>{project.preview}</p>
                         </div>
                         <motion.button

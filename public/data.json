@@ -36,7 +36,6 @@
     {
         "id": 2,
         "title": "Sophie Bluel",
-        "logo": "./sites/pictures/sophie_bluel/sophiebluel_logo.svg",
         "cover": "./sites/pictures/sophie_bluel/sophiebluelcover.webp",
         "preview": "Conception du site portfolio d'une architecte d'intérieur",
         "subtitle": "OpenClassRoom projet 6 - créer une page web dynamique avec JavaScript ",
@@ -69,7 +68,6 @@
     {
         "id": 3,
         "title": "Nina Carducci",
-        "logo": "./sites/pictures/nina_carducci/nina_logo.svg",
         "cover": "./sites/pictures/nina_carducci/ninacover.webp",
         "preview": "Optimiser le référencement du site d'une photographe",
         "subtitle": "OpenClassRoom projet 9 - Utiliser les audits Lighthouse et Wave pour optimiser les performances d'un site ",
@@ -102,12 +100,12 @@
             "Accessibilité optimisée (balises html appropriées, correction du contraste, ajout de descriptions alternatives sur les images et de labels sur les champs du formulaire)",
             "ajout d'un google rich snippet"
         ],
-        "repo": "https://github.com/nour86/nina_carducci"
+        "repo": "https://github.com/nour86/nina_carducci",
+        "website": "https://nour86.github.io/nina_carducci/"
     },
     {
         "id": 4,
         "title": "Kaza",
-        "logo": "./sites/pictures/kasa/kasa_logo.svg",
         "cover": "./sites/pictures/kasa/kasacover.webp",
         "preview": "Créer une application avec React",
         "subtitle": "OpenClassRoom projet - 8 Développer l'ensemble de l'application en utilisant : ",
@@ -131,7 +129,6 @@
     {
         "id": 5,
         "title": "Argent Bank",
-        "logo": "./sites/pictures/argent_bank/argentbank_logo.svg",
         "cover": "./sites/pictures/argent_bank/argentbankcover.webp",
         "preview": "implémenter le Front-End d'une application avec React",
         "subtitle": "OpenClassRoom projet 11 - Utiliser Redux et connecter l'application à une base NoSql ",
