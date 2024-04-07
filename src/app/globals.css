@@ -42,3 +42,8 @@ body {
         font-size: 1.25rem;
     }
 }
+
+:root {
+    --bg-color: rgb(20, 20, 20);
+    --card-color: rgb(23, 23, 23);
+}

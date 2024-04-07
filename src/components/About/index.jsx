@@ -3,7 +3,6 @@
 import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
-import './style.css'
 import DisplayTechnos from './DisplayTechnos'
 
 const variants = {

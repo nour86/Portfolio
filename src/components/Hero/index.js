@@ -42,7 +42,7 @@ const sliderVariants = {
 
 function Hero() {
     return (
-        <section className=" h-[calc(100vh)] w-full snap-center overflow-hidden relative bg-gradient-to-b from-slate-950 to-slate-800">
+        <section className=" h-[100vh] w-full snap-start overflow-hidden relative bg-gradient-to-b from-slate-950 to-slate-800">
             <div className="max-w-7xl m-auto h-full">
                 <motion.div
                     className=" p-4 h-full w-full items-center flex flex-col justify-center gap- "
