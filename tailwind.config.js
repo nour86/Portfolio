@@ -14,6 +14,9 @@ module.exports = {
                 imac: "url('/diapo/imac.svg')",
                 macbook: "url('/diapo/macbook.svg')",
             },
+            inset: {
+                xs: '1px',
+            },
             backgroundColor: {
                 cardColor: 'rgb(23, 23, 23)',
             },
