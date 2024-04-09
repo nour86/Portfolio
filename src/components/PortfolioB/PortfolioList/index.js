@@ -13,27 +13,24 @@ const PortfolioList = () => {
         }
     }
 
-    const handleMouseEnter = (e) => {
-        setIsMouseOver(true)
-    }
-    const handleMouseLeave = (e) => {
-        setIsMouseOver(false)
+    const handleMouseIn = (e) => {
+        setIsMouseOver((prev) => !prev)
     }
 
     return (
         <div
             id="cards"
             name="cards-grid"
-            className=" h-full w-[calc(100%-20px)] max-w-5xl self-center m-auto bg-slate-950 flex flex-wrap relative gap-2 opacity-100 p-4"
+            className=" h-full w-[calc(100%-20px)] max-w-5xl self-center m-auto  flex flex-wrap relative gap-2 opacity-100 p-4"
             onMouseMove={handleMouseMove}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            onMouseEnter={handleMouseIn}
+            onMouseLeave={handleMouseIn}
         >
-            <Card mousePosition={mousePosition} mouseInGrid={isMouseOver} />
-            <Card mousePosition={mousePosition} mouseInGrid={isMouseOver} />
-            <Card mousePosition={mousePosition} mouseInGrid={isMouseOver} />
-            <Card mousePosition={mousePosition} mouseInGrid={isMouseOver} />
-            <Card mousePosition={mousePosition} mouseInGrid={isMouseOver} />
+            <Card mouseInGrid={isMouseOver} />
+            <Card mouseInGrid={isMouseOver} />
+            <Card mouseInGrid={isMouseOver} />
+            <Card mouseInGrid={isMouseOver} />
+            <Card mouseInGrid={isMouseOver} />
         </div>
     )
 }

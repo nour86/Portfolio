@@ -17,6 +17,13 @@ module.exports = {
             inset: {
                 xs: '1px',
             },
+            margin: {
+                xs: '1px',
+            },
+            padding: {
+                xs: '1px',
+            },
+
             backgroundColor: {
                 cardColor: 'rgb(23, 23, 23)',
             },
