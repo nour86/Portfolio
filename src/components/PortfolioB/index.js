@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 
-import { motion, useScroll, useSpring } from 'framer-motion'
+import { useScroll, useSpring } from 'framer-motion'
 
 import PortfolioTitle from './PortfolioTitle'
-import PortfolioList from './PortfolioList'
+import PortfolioGrid from './ProfolioGrid'
 
 const PortfolioB = () => {
     const [jsonData, setJsonData] = useState(null)
@@ -39,7 +39,7 @@ const PortfolioB = () => {
             id="Portfolio"
         >
             <PortfolioTitle />
-            <PortfolioList />
+            <PortfolioGrid />
         </section>
     )
 }

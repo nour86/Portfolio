@@ -8,9 +8,9 @@ import PortfolioB from '@/components/PortfolioB'
 export default function Page() {
     return (
         <main>
-            {/* <Sidebar />
+            <Sidebar />
             <Hero />
-            <About /> */}
+            <About />
             {/* <Portfolio /> */}
             <PortfolioB />
             <Contact />

@@ -1,17 +1,9 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import './style.css'
-import Card from './Card'
+import Card from './Card/index.jsx'
 
-const PortfolioList = () => {
+const PortfolioGrid = () => {
     const [isMouseOver, setIsMouseOver] = useState(false)
-    const mousePosition = useRef({ x: 0, y: 0 })
-
-    const handleMouseMove = (event) => {
-        mousePosition.current = {
-            x: event.clientX,
-            y: event.clientY,
-        }
-    }
 
     const handleMouseIn = (e) => {
         setIsMouseOver((prev) => !prev)
@@ -22,10 +14,10 @@ const PortfolioList = () => {
             id="cards"
             name="cards-grid"
             className=" h-full w-[calc(100%-20px)] max-w-5xl self-center m-auto  flex flex-wrap relative gap-2 opacity-100 p-4"
-            onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseIn}
             onMouseLeave={handleMouseIn}
         >
+            <Card mouseInGrid={isMouseOver} />
             <Card mouseInGrid={isMouseOver} />
             <Card mouseInGrid={isMouseOver} />
             <Card mouseInGrid={isMouseOver} />
@@ -35,4 +27,4 @@ const PortfolioList = () => {
     )
 }
 
-export default PortfolioList
+export default PortfolioGrid

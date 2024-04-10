@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import CardStyle from './CardStyle'
+import CardStyle from './CardStyle/index.jsx'
 
 const cardVariants = {}
 
@@ -23,7 +22,6 @@ const imageVariants = {
         opacity: 0.8,
     },
 }
-
 function Card({ mouseInGrid }) {
     const [cardPosition, setCardPosition] = useState({ left: 0, top: 0 })
     const [isHovered, setIsHovered] = useState(false)
@@ -32,12 +30,13 @@ function Card({ mouseInGrid }) {
     const handleMouseIn = (e) => {
         setIsHovered((prev) => !prev)
     }
+
     useEffect(() => {
         const rect = cardRef.current.getBoundingClientRect()
         const leftRect = rect.left
         const topRect = rect.top
         setCardPosition({ left: leftRect, top: topRect })
-    }, [])
+    }, [mouseInGrid])
 
     return (
         <motion.div
@@ -48,7 +47,6 @@ function Card({ mouseInGrid }) {
             onHoverEnd={handleMouseIn}
             variants={cardVariants}
             whileHover="hover"
-            // onMouseMove={handleMouseMove}
         >
             <CardStyle cardPosition={cardPosition} mouseInGrid={mouseInGrid} />
             <motion.div
@@ -76,10 +74,10 @@ function Card({ mouseInGrid }) {
                     >
                         <div
                             name="card-info"
-                            className="flex items-start gap-2 "
+                            className="flex items-start gap-2 pl-2 "
                         >
                             <div name="card-info-title">
-                                <h3 className="text-lg leading-5">
+                                <h3 className="text-lg pt-2 leading-5">
                                     Apartments
                                 </h3>
                                 <h4 className="text-base text-white/50 mt-2">
