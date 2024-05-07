@@ -41,7 +41,11 @@ const PortfolioB = () => {
                 id="Portfolio"
             >
                 <PortfolioTitle />
-                <PortfolioGrid />
+                {jsonData ? (
+                    <PortfolioGrid projects={jsonData} />
+                ) : (
+                    <h3> loading Projects...</h3>
+                )}
             </section>
         </MousePositionProvider>
     )

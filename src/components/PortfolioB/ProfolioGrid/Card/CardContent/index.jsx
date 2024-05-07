@@ -23,7 +23,8 @@ const imageVariants = {
     },
 }
 
-const CardContent = ({ isHovered }) => {
+const CardContent = ({ isHovered, title, cover, preview, subtitle }) => {
+    console.log('card rerendered')
     return (
         <motion.div
             name="card-content"
@@ -36,7 +37,7 @@ const CardContent = ({ isHovered }) => {
             >
                 <motion.img
                     className="w-10/12 object-fill"
-                    src="/sites/pictures/Kasa/kasacover.webp"
+                    src={cover}
                     variants={imageVariants}
                     animate={isHovered ? 'hover' : 'initial'}
                 ></motion.img>
@@ -53,13 +54,15 @@ const CardContent = ({ isHovered }) => {
                         name="card-info"
                         className="flex items-start gap-2 pl-2 "
                     >
-                        <div name="card-info-title">
-                            <h3 className="text-lg pt-2 leading-5">
-                                Apartments
-                            </h3>
-                            <h4 className="text-base text-white/50 mt-2">
-                                Places to be apart. Wait,
-                            </h4>
+                        <div
+                            name="card-info-title"
+                            className=" text-ellipsis overflow-hidden"
+                        >
+                            <h3 className="text-lg pt-2 leading-5">{title}</h3>
+
+                            <p className="text-base text-white/50 mt-2">
+                                {preview}
+                            </p>
                         </div>
                     </div>
                 </motion.div>

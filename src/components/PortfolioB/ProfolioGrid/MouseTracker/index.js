@@ -15,9 +15,11 @@ const MouseTracker = () => {
         }
 
         window.addEventListener('mousemove', handleMouseMove)
+        dispatch({ type: 'mouseIn' })
 
         return () => {
             window.removeEventListener('mousemove', handleMouseMove)
+            dispatch({ type: 'mouseOut' })
         }
     }, [])
     return <></>

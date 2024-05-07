@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import CardShadow from './CardShadow/index.jsx'
 import CardContent from './CardContent/index.jsx'
 
-function Card({ mouseInGrid }) {
+function Card({ title, cover, preview, subtitle }) {
     const [isHovered, setIsHovered] = useState(false)
 
     const handleMouseIn = (e) => {
@@ -17,8 +17,14 @@ function Card({ mouseInGrid }) {
             onHoverStart={handleMouseIn}
             onHoverEnd={handleMouseIn}
         >
-            <CardShadow mouseInGrid={mouseInGrid} />
-            <CardContent isHovered={isHovered} />
+            <CardShadow />
+            <CardContent
+                isHovered={isHovered}
+                title={title}
+                cover={cover}
+                preview={preview}
+                subtitle={subtitle}
+            />
         </motion.div>
     )
 }
