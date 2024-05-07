@@ -1,29 +1,32 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useReducer } from 'react'
 import './style.css'
 import Card from './Card/index.jsx'
 
-const PortfolioGrid = () => {
-    const [isMouseOver, setIsMouseOver] = useState(false)
+import { useMouseContext } from '../MouseContext'
+import MouseTracker from './MouseTracker'
 
-    const handleMouseIn = (e) => {
-        setIsMouseOver((prev) => !prev)
-    }
+const PortfolioGrid = () => {
+    const { state, dispatch } = useMouseContext()
 
     return (
-        <div
-            id="cards"
-            name="cards-grid"
-            className=" h-full w-[calc(100%-20px)] max-w-5xl self-center m-auto  flex flex-wrap relative gap-2 opacity-100 p-4"
-            onMouseEnter={handleMouseIn}
-            onMouseLeave={handleMouseIn}
-        >
-            <Card mouseInGrid={isMouseOver} />
-            <Card mouseInGrid={isMouseOver} />
-            <Card mouseInGrid={isMouseOver} />
-            <Card mouseInGrid={isMouseOver} />
-            <Card mouseInGrid={isMouseOver} />
-            <Card mouseInGrid={isMouseOver} />
-        </div>
+        <>
+            <div
+                id="cards"
+                name="cards-grid"
+                className=" h-full w-[calc(100%-20px)] max-w-5xl self-center m-auto  flex flex-wrap relative gap-2 opacity-100 p-4"
+                onMouseEnter={() => dispatch({ type: 'mouseIn' })}
+                onMouseLeave={() => dispatch({ type: 'mouseOut' })}
+            >
+                {state.mouseInGrid && <MouseTracker />}
+
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+                <Card />
+            </div>
+        </>
     )
 }
 

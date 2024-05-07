@@ -6,6 +6,7 @@ import { useScroll, useSpring } from 'framer-motion'
 
 import PortfolioTitle from './PortfolioTitle'
 import PortfolioGrid from './ProfolioGrid'
+import { MousePositionProvider } from './MouseContext'
 
 const PortfolioB = () => {
     const [jsonData, setJsonData] = useState(null)
@@ -34,13 +35,15 @@ const PortfolioB = () => {
     const scaleX = useSpring(scrollYProgress, { stiffness: 500, damping: 30 })
 
     return (
-        <section
-            className="snap-start flex flex-col items-center min-h-screen "
-            id="Portfolio"
-        >
-            <PortfolioTitle />
-            <PortfolioGrid />
-        </section>
+        <MousePositionProvider>
+            <section
+                className="snap-start flex flex-col items-center min-h-screen "
+                id="Portfolio"
+            >
+                <PortfolioTitle />
+                <PortfolioGrid />
+            </section>
+        </MousePositionProvider>
     )
 }
 
