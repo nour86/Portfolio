@@ -15,7 +15,7 @@ function ProjectPreview({ project, expanded, handler, y, variants }) {
                 damping: 20,
             }}
             exit={{ opacity: 0, x: '-100%' }}
-            className=" flex items-center justify-center self-end w-full h-5/6"
+            className=" flex items-center justify-center self-end w-full h-5/6 bg-red-400"
         >
             <div className="w-full sm:w-3/4 max-w-screen-lg flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-8 h-fulloverflow-hidden ">
                 {/* imageContainer */}

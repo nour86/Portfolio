@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
 import { useEffect } from 'react'
-import { useMouseContext } from '../../MouseContext'
+import { useMouseContext } from '../../../MouseContext'
 
-const MouseTracker = () => {
-    const { state, dispatch } = useMouseContext()
+const MouseTrackerActivated = () => {
+    const { dispatch } = useMouseContext()
 
     useEffect(() => {
         const handleMouseMove = (event) => {
@@ -23,6 +23,10 @@ const MouseTracker = () => {
         }
     }, [])
     return <></>
+}
+
+const MouseTracker = ({ mouseOver }) => {
+    return <>{mouseOver && <MouseTrackerActivated />}</>
 }
 
 export default MouseTracker

@@ -3,10 +3,11 @@
 import React, { useState, useEffect, useRef } from 'react'
 
 import { useScroll, useSpring } from 'framer-motion'
-
-import PortfolioTitle from './PortfolioTitle'
-import PortfolioGrid from './ProfolioGrid'
 import { MousePositionProvider } from './MouseContext'
+import PortfolioContent from './PortfolioContent'
+import Section from '../Section'
+import SectionTitle from '../Section/SectionTitle'
+import SectionContent from '../Section/SectionContent'
 
 const PortfolioB = () => {
     const [jsonData, setJsonData] = useState(null)
@@ -36,17 +37,16 @@ const PortfolioB = () => {
 
     return (
         <MousePositionProvider>
-            <section
-                className="snap-start flex flex-col items-center min-h-screen "
-                id="Portfolio"
-            >
-                <PortfolioTitle />
-                {jsonData ? (
-                    <PortfolioGrid projects={jsonData} />
-                ) : (
-                    <h3> loading Projects...</h3>
-                )}
-            </section>
+            <Section id="Portfolio" gradient="down">
+                <SectionTitle title="Mes derniers projets" />
+                <SectionContent>
+                    {jsonData ? (
+                        <PortfolioContent projects={jsonData} />
+                    ) : (
+                        <h3> loading Projects...</h3>
+                    )}
+                </SectionContent>
+            </Section>
         </MousePositionProvider>
     )
 }

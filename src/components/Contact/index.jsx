@@ -3,6 +3,9 @@
 import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
+import Section from '../Section'
+import SectionTitle from '../Section/SectionTitle'
+import SectionContent from '../Section/SectionContent'
 
 const variants = {
     initial: {
@@ -46,77 +49,73 @@ const Contact = () => {
     }
 
     return (
-        <section
-            className=" w-full flex items-center relative snap-center bg-gradient-to-b
-from-slate-950 to-slate-800"
-            id="Contact"
-        >
-            <motion.div
-                className="w-full h-full p-2 flex flex-col sm:max-w-7xl m-auto items-center justify-center  gap-11"
-                variants={variants}
-                initial="initial"
-                whileInView="animate"
-            >
+        <Section id="Contact" gradient="top">
+            <SectionTitle title="Contactez moi!" />
+            <SectionContent>
                 <motion.div
-                    className=" flex-1 flex flex-col text-center items-center  mt-8 sm:gap-10 "
+                    className="w-full h-full p-2 flex flex-col sm:max-w-7xl m-auto items-center justify-center  gap-11"
                     variants={variants}
+                    initial="initial"
+                    whileInView="animate"
                 >
-                    <motion.h2
+                    <motion.div
+                        className=" flex-1 flex flex-col text-center items-center  mt-8 sm:gap-10 "
                         variants={variants}
-                        className=" text-3xl sm:text-6xl leading-[80px] "
                     >
-                        Ecrivez moi !
-                    </motion.h2>
-                    <motion.div className="item" variants={variants}>
-                        <h3>Mail</h3>
-                        <span className="font-light">n.alchami@gmail.com</span>
+                        <motion.div className="item" variants={variants}>
+                            <h3>Mail</h3>
+                            <span className="font-light">
+                                n.alchami@gmail.com
+                            </span>
+                        </motion.div>
                     </motion.div>
-                </motion.div>
-                <div className="flex-1 flex flex-col w-full items-center justify-center relative p-6 max-w-screen-sm">
-                    <motion.form
-                        className="w-full sm:w-3/4 flex flex-col gap-5"
-                        ref={formRef}
-                        onSubmit={sendEmail}
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        transition={{ delay: 1, duration: 3 }}
-                    >
-                        <input
-                            className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
-                            type="text"
-                            placeholder="Name"
-                            name="user_name"
-                            aria-label="name"
-                            required
-                        />
-                        <input
-                            className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
-                            type="email"
-                            required
-                            placeholder="Email"
-                            name="user_email"
-                            aria-label="email"
-                        />
-                        <textarea
-                            rows={4}
-                            className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
-                            placeholder="Message"
-                            name="message"
-                            aria-label="message"
-                            required
-                        />
-                        <button
-                            name="envoyer l'email"
-                            className="p-3 sm:p-5 border-none bg-orange-400 text-black cursor-pointer rounded-md font-medium"
+                    <div className="flex-1 flex flex-col w-full items-center justify-center relative p-6 max-w-screen-sm">
+                        <motion.form
+                            className="w-full sm:w-3/4 flex flex-col gap-5"
+                            ref={formRef}
+                            onSubmit={sendEmail}
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            transition={{ delay: 1, duration: 3 }}
                         >
-                            Envoyer!
-                        </button>
-                        {error && 'Error'}
-                        {success && 'Merci ! je vous contacte au plus vite!'}
-                    </motion.form>
-                </div>
-            </motion.div>
-        </section>
+                            <input
+                                className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
+                                type="text"
+                                placeholder="Name"
+                                name="user_name"
+                                aria-label="name"
+                                required
+                            />
+                            <input
+                                className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
+                                type="email"
+                                required
+                                placeholder="Email"
+                                name="user_email"
+                                aria-label="email"
+                            />
+                            <textarea
+                                rows={4}
+                                className=" p-3 sm:p-5 bg-transparent border-2 border-solid border-white text-white rounded-md"
+                                placeholder="Message"
+                                name="message"
+                                aria-label="message"
+                                required
+                            />
+                            <button
+                                name="envoyer l'email"
+                                className="p-3 sm:p-5 border-none bg-orange-400 text-black cursor-pointer rounded-md font-medium"
+                            >
+                                Envoyer!
+                            </button>
+                            {error && 'Error'}
+                            {success &&
+                                'Merci ! je vous contacte au plus vite!'}
+                        </motion.form>
+                    </div>
+                </motion.div>
+            </SectionContent>
+        </Section>
     )
 }
 

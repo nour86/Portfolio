@@ -1,0 +1,30 @@
+.pic_hide {
+    opacity: 0;
+    animation: slideout 1s forwards;
+}
+.pic_display {
+    opacity: 1;
+    animation: slidein 1s forwards;
+}
+
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideout {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}

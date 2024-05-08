@@ -7,11 +7,6 @@ const CardShadow = () => {
 
     const [cardPosition, setCardPosition] = useState({ left: 0, top: 0 })
 
-    const [relativePosition, setRelativePosition] = useState({
-        relativeX: 0,
-        relativeY: 0,
-    })
-
     const cardRef = useRef(null)
 
     useEffect(() => {
@@ -21,11 +16,8 @@ const CardShadow = () => {
         setCardPosition({ left: leftRect, top: topRect })
     }, [state.mouseInGrid])
 
-    useEffect(() => {
-        const relativeX = state.mousePosition.x - cardPosition.left
-        const relativeY = state.mousePosition.y - cardPosition.top
-        setRelativePosition({ relativeX, relativeY })
-    }, [state.mousePosition])
+    const relativeX = state.mousePosition.x - cardPosition.left
+    const relativeY = state.mousePosition.y - cardPosition.top
 
     return (
         <>
@@ -33,13 +25,13 @@ const CardShadow = () => {
                 name="card-background"
                 className="absolute h-full w-full left-0 top-0 opacity-0 hover:opacity-100 rounded-xl transition-opacity duration-500 z-[3]"
                 style={{
-                    background: `radial-gradient(800px circle at ${relativePosition.relativeX}px ${relativePosition.relativeY}px, rgba(255, 255, 255, 0.06), transparent 40%)`,
+                    background: `radial-gradient(1200px circle at ${relativeX}px ${relativeY}px, rgba(255, 255, 255, 0.06), transparent 60%)`,
                 }}
                 ref={cardRef}
             >
                 <div>
-                    <p>Relative X: {relativePosition.relativeX}</p>
-                    <p>Relative Y: {relativePosition.relativeY}</p>
+                    <p>Relative X: {relativeX}</p>
+                    <p>Relative Y: {relativeY}</p>
                 </div>
             </div>
             <div
@@ -49,7 +41,7 @@ const CardShadow = () => {
                 } rounded-xl transition-opacity duration-500 z-[1] `}
                 style={{
                     background: `radial-gradient(
-                    800px circle at ${relativePosition.relativeX}px ${relativePosition.relativeY}px,rgba(255, 255, 255, 0.4),transparent 40%)`,
+                    800px circle at ${relativeX}px ${relativeY}px,rgba(255, 255, 255, 0.4),transparent 40%)`,
                 }}
             ></div>
         </>

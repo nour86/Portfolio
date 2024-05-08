@@ -25,7 +25,7 @@ module.exports = {
             },
 
             backgroundColor: {
-                cardColor: 'rgb(23, 23, 23)',
+                cardColor: 'rgb(2, 6, 23)',
             },
             fontSize: {
                 clamp4xl: 'clamp(2rem, 10vw, 6rem)',

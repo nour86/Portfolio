@@ -24,7 +24,6 @@ const imageVariants = {
 }
 
 const CardContent = ({ isHovered, title, cover, preview, subtitle }) => {
-    console.log('card rerendered')
     return (
         <motion.div
             name="card-content"
