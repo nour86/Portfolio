@@ -14,7 +14,6 @@ export default function Page() {
             <About />
             {/* <Portfolio /> */}
             <PortfolioB />
-            <TypeWriter title="ceci est un test" />
             <Contact />
         </main>
     )
