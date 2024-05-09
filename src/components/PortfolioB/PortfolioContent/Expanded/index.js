@@ -18,7 +18,7 @@ function ProjectExpanded({ project, handler }) {
                 damping: 20,
             }}
             exit={{ opacity: 0, scale: 0, x: '100%' }}
-            className="z-10 absolute flex items-center justify-center self-end w-full h-full max-h-[1000px]  "
+            className="z-10 absolute top-0 left-0 snap-start flex items-start sm:items-center justify-start sm:justify-center self-center w-full h-full max-h-screen"
         >
             <motion.button
                 whileHover={{ scale: 0.9 }}

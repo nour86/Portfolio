@@ -3,18 +3,6 @@
     --card-color: rgb(23, 23, 23);
 }
 
-#cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    max-width: 916px;
-    width: calc(100% - 20px);
-}
-
-#cards:hover > .card::after {
-    opacity: 1;
-}
-
 .card {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -135,23 +123,6 @@ i {
 }
 
 /* -- ↓ ↓ ↓ some responsiveness ↓ ↓ ↓ -- */
-
-@media (max-width: 1000px) {
-    body {
-        align-items: flex-start;
-        overflow: auto;
-    }
-
-    #cards {
-        max-width: 1000px;
-        padding: 10px 0px;
-    }
-
-    .card {
-        flex-shrink: 1;
-        width: calc(50% - 4px);
-    }
-}
 
 @media (max-width: 500px) {
     .card {

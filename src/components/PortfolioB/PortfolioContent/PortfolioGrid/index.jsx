@@ -16,11 +16,10 @@ const PortfolioGrid = ({ projects, setProject, expanded, variants }) => {
     }
 
     return (
-        <>
+        <div className="flex flex-col relative items-center h-full w-full">
             <motion.div
-                id="cards"
                 name="cards-grid"
-                className="  w-full max-w-7xl self-center flex flex-wrap relative opacity-100 "
+                className=" w-full h-full md:w-5/6 max-w-7xl flex flex-wrap justify-center sm:justify-start relative gap-3 overflow-hidden opacity-100 "
                 initial={{ opacity: 0, x: '-100%' }}
                 animate={expanded ? 'expanded' : { opacity: 1, x: 0 }}
                 variants={variants}
@@ -49,7 +48,7 @@ const PortfolioGrid = ({ projects, setProject, expanded, variants }) => {
                     )
                 })}
             </motion.div>
-        </>
+        </div>
     )
 }
 
