@@ -102,12 +102,17 @@ const Contact = () => {
                                 aria-label="message"
                                 required
                             />
-                            <button
+                            <motion.button
                                 name="envoyer l'email"
-                                className="p-3 sm:p-5 border-none bg-orange-400 text-black cursor-pointer rounded-md font-medium"
+                                className=" p-3 border-2 border-solid w-40 border-white rounded-xl text-black bg-white cursor-pointer z-10"
+                                whileHover={{
+                                    scale: 0.9,
+                                    color: 'white',
+                                    background: 'transparent',
+                                }}
                             >
                                 Envoyer!
-                            </button>
+                            </motion.button>
                             {error && 'Error'}
                             {success &&
                                 'Merci ! je vous contacte au plus vite!'}

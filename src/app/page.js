@@ -1,20 +1,20 @@
 import Hero from '@/components/Hero'
 import Portfolio from '@/components/Porfolio'
 import Contact from '@/components/Contact'
-import Sidebar from '@/components/Sidebar'
 import About from '@/components/About'
 import PortfolioB from '@/components/PortfolioB'
-import Header from '@/components/Header'
+import TypeWriter from '@/components/utils/Typewriter'
+import Sidebar from '@/components/utils/Sidebar'
 
 export default function Page() {
     return (
         <main>
             <Sidebar />
-            <Header />
             <Hero />
             <About />
             {/* <Portfolio /> */}
             <PortfolioB />
+            <TypeWriter title="ceci est un test" />
             <Contact />
         </main>
     )

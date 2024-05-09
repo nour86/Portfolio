@@ -21,6 +21,7 @@ function Card({ title, cover, preview, subtitle, id, setProject }) {
             onHoverStart={handleMouseIn}
             onHoverEnd={handleMouseIn}
             onClick={handleClick}
+            whileHover={{ scale: 0.95 }}
         >
             <CardShadow />
             <CardContent

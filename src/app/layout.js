@@ -24,7 +24,7 @@ export default function RootLayout() {
     return (
         <html lang="fr">
             <body className={inter.className}>
-                {/* <Header /> */}
+                <Header />
                 <Suspense fallback={<Loading />}>
                     <Page />
                 </Suspense>

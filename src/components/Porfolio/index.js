@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { motion, useScroll, useSpring } from 'framer-motion'
 
 import Project from './Project'
-import ParticlesBackground from '../Particles'
+import ParticlesBackground from '../utils/Particles'
 
 const Portfolio = () => {
     const [jsonData, setJsonData] = useState(null)
