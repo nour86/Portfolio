@@ -17,11 +17,10 @@ function Card({ title, cover, preview, subtitle, id, setProject }) {
     return (
         <motion.article
             name="card"
-            className="flex flex-col items-center h-64 w-72 relative cursor-pointer m-2 overflow-hidden rounded-xl bg-cardColor"
+            className="flex flex-col items-center h-64 w-72 relative cursor-pointer m-1 overflow-hidden rounded-xl bg-cardColor"
             onHoverStart={handleMouseIn}
             onHoverEnd={handleMouseIn}
             onClick={handleClick}
-            whileHover={{ scale: 0.95 }}
         >
             <CardShadow />
             <CardContent
