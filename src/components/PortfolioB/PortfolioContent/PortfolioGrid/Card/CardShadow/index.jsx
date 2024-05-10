@@ -23,17 +23,12 @@ const CardShadow = () => {
         <>
             <div
                 name="card-background"
-                className="absolute h-full w-full left-0 top-0 opacity-0 hover:opacity-100 rounded-xl transition-opacity duration-500 z-[3]"
+                className="absolute h-full w-full left-0 top-0 opacity-0 m-xs hover:opacity-100 rounded-xl transition-opacity duration-500 z-[3]"
                 style={{
                     background: `radial-gradient(800px circle at ${relativeX}px ${relativeY}px, rgba(255, 255, 255, 0.2), transparent 40%)`,
                 }}
                 ref={cardRef}
-            >
-                <div>
-                    <p>Relative X: {relativeX}</p>
-                    <p>Relative Y: {relativeY}</p>
-                </div>
-            </div>
+            ></div>
             <div
                 name="card-border"
                 className={`absolute h-full w-full left-0 top-0 ${

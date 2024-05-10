@@ -9,12 +9,12 @@ import Sidebar from '@/components/utils/Sidebar'
 export default function Page() {
     return (
         <main>
-            <Sidebar />
+            {/* <Sidebar />
             <Hero />
-            <About />
+            <About /> */}
             {/* <Portfolio /> */}
             <PortfolioB />
-            <Contact />
+            {/* <Contact /> */}
         </main>
     )
 }

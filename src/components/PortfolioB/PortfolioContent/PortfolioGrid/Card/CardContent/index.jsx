@@ -46,8 +46,8 @@ const CardContent = ({ isHovered, title, cover, preview, subtitle }) => {
                     name="card-info-wrapper"
                     variants={textVariants}
                     animate={isHovered ? 'hover' : 'initial'}
-                    className={`"flex justify-start w-full relative rounded-b-xl box-border items-center bg-cardColor h-32 
-        } flex-grow overflow-hidden text-ellipsis "`}
+                    className="flex justify-start w-full relative rounded-b-xl box-border bg-cardColor h-32 
+         flex-grow overflow-hidden text-ellipsis "
                 >
                     <div
                         name="card-info"

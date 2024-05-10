@@ -19,7 +19,7 @@ const Slider = ({ data }) => {
             {pictures?.map((picture, idx) => (
                 <div
                     key={picture.title}
-                    className={`w-full left-0 top-0 object-cover absolute ${
+                    className={`w-full h-full left-0 top-0 object-cover flex justify-center items-center absolute ${
                         index === idx ? 'pic_display' : 'pic_hide'
                     }`}
                 >
@@ -35,7 +35,7 @@ const Slider = ({ data }) => {
                             type="radio"
                             name="radio-button"
                             checked={index == radioIdx}
-                            className=" w-4 h-4 text-black"
+                            className=" w-3 h-3 md:w-4 md:h-4 brightness-75 m-0.5 text-black"
                             readOnly
                         />
                     ))}

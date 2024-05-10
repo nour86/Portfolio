@@ -18,11 +18,11 @@ function ProjectExpanded({ project, handler }) {
                 damping: 20,
             }}
             exit={{ opacity: 0, scale: 0, x: '100%' }}
-            className="z-10 absolute top-0 left-0 snap-start flex items-start sm:items-center justify-start sm:justify-center self-center w-full h-full max-h-screen"
+            className="z-10 absolute top-0 left-0 snap-start flex flex-col items-center justify-start md:justify-center self-center w-full h-full max-h-screen "
         >
             <motion.button
                 whileHover={{ scale: 0.9 }}
-                className=" flex items-center justify-center absolute top-[5vh] sm:top-1/3 left-4 sm:left-6 rounded-full w-12 h-12 sm:w-16 sm:h-16 bg-orange-400 z-40 text-black  "
+                className=" flex items-center justify-center absolute top-[5vh] sm:top-1/3 left-4 sm:left-6 rounded-full w-12 h-12 sm:w-16 sm:h-16 bg-white z-40 text-black  "
                 onClick={() => handler(false)}
             >
                 <img
@@ -34,13 +34,13 @@ function ProjectExpanded({ project, handler }) {
             <motion.div className="w-full md:w-5/6 max-w-screen-xl grid grid-cols-10 grid-rows-10 gap-x-3  ">
                 <div
                     name="diapo-grid"
-                    className=" col-span-10 row-span-3 sm:row-span-4 md:row-span-5 lg:row-span-7 md:col-span-6 "
+                    className=" col-span-10 row-span-3  md:row-span-5 lg:row-span-6 md:col-span-6 flex items-start justify-center "
                 >
                     <div
                         name="diapo-screen"
-                        className=" flex flex-col h-full items-center relative object-contain"
+                        className=" flex flex-col w-3/4 sm:w-5/6 mt-4  aspect-video relative bg-screen rounded-md"
                     >
-                        <picture>
+                        {/* <picture>
                             <source
                                 media="(max-width: 768px)"
                                 srcSet="./diapo/macbook.svg 768w"
@@ -52,9 +52,9 @@ function ProjectExpanded({ project, handler }) {
                                 alt="visionneuse"
                                 className="absolute -z-10 top-0 left-1/2 -translate-x-1/2 w-3/4 md:w-screen block"
                             />
-                        </picture>
+                        </picture> */}
 
-                        <div className="relative w-6/12 mt-[3vw] md:w-[calc(96%)] md:m-3 aspect-video shadow-inner rounded-md bg-transparent overflow-hidden">
+                        <div className="relative w-[calc(100%-24px] m-3 aspect-video shadow-inner rounded-md  overflow-hidden">
                             <Slider data={project.diapo} />
                         </div>
                     </div>
@@ -102,8 +102,6 @@ function ProjectExpanded({ project, handler }) {
                         </div>
                     </div>
                 </motion.div>
-
-                <div className="row-span-1 col-span-10 md:row-span-1 md:col-span-6 "></div>
 
                 <div
                     name="button"
