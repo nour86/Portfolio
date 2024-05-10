@@ -6,7 +6,7 @@ export const WebsiteButton = ({ logo, url }) => {
     return (
         <motion.button whileHover={{ scale: 0.9 }}>
             <Link
-                className="bg-orange-400 text-black px-3 flex items-center justify-evenly border-none rounded-xl p-3 w-24 sm:w-48 lg:w-60 h-12 cursor-pointer"
+                className="bg-white text-black px-3 flex items-center justify-evenly border-none rounded-xl p-3 w-24 sm:w-48 lg:w-60 h-12 cursor-pointer"
                 href={url}
                 target="blank"
             >
@@ -25,7 +25,7 @@ export const RepoButton = ({ url }) => {
     return (
         <motion.button whileHover={{ scale: 0.9 }}>
             <Link
-                className="bg-orange-400 text-black px-3 flex items-center justify-evenly border-none rounded-xl p-3  w-24 sm:w-48 lg:w-60 h-12 cursor-pointer"
+                className="bg-white text-black px-3 flex items-center justify-evenly border-none rounded-xl p-3  w-24 sm:w-48 lg:w-60 h-12 cursor-pointer"
                 href={url}
                 target="blank"
             >

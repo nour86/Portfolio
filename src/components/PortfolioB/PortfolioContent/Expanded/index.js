@@ -18,64 +18,66 @@ function ProjectExpanded({ project, handler }) {
                 damping: 20,
             }}
             exit={{ opacity: 0, scale: 0, x: '100%' }}
-            className="z-10 absolute top-0 left-0 snap-start flex flex-col items-center justify-start md:justify-center self-center w-full h-full max-h-screen "
+            className="z-10 absolute top-0 left-0 snap-start flex flex-col items-center justify-start md:justify-center w-full h-full max-h-[calc(1024px)]   "
         >
             <motion.button
                 whileHover={{ scale: 0.9 }}
-                className=" flex items-center justify-center absolute top-[5vh] sm:top-1/3 left-4 sm:left-6 rounded-full w-12 h-12 sm:w-16 sm:h-16 bg-white z-40 text-black  "
+                className=" flex items-center justify-center absolute top-[5vh] md:top-1/3 left-4 md:left-12 rounded-full w-10 h-10 md:w-12 md:h-12 sm:w-16 sm:h-16 bg-white z-40 text-black  "
                 onClick={() => handler(false)}
             >
                 <img
                     src="./left_arrow.svg"
-                    className="h-6"
+                    className="h-4 md:h-6"
                     alt="fleche retour"
                 ></img>
             </motion.button>
-            <motion.div className="w-full md:w-5/6 max-w-screen-xl grid grid-cols-10 grid-rows-10 gap-x-3  ">
+            <motion.div className="w-full md:w-3/4 max-w-screen-xl flex justify-center md:justify-start items-center flex-wrap relative gap-x-3 py-3  ">
                 <div
                     name="diapo-grid"
-                    className=" col-span-10 row-span-3  md:row-span-5 lg:row-span-6 md:col-span-6 flex items-start justify-center "
+                    className=" w-full sm:w-3/4 max-w-[calc(840px)] mx-4 flex items-center justify-center md:self-start md:justify-start   "
                 >
                     <div
                         name="diapo-screen"
-                        className=" flex flex-col w-3/4 sm:w-5/6 mt-4  aspect-video relative bg-screen rounded-md"
+                        className=" w-5/6 sm:w-full max-w-[calc(816px)] aspect-video relative rounded-md flex bg-screen items-center "
                     >
-                        {/* <picture>
-                            <source
-                                media="(max-width: 768px)"
-                                srcSet="./diapo/macbook.svg 768w"
-                                sizes="768px"
-                            />
-
-                            <img
-                                src="./diapo/imac.svg"
-                                alt="visionneuse"
-                                className="absolute -z-10 top-0 left-1/2 -translate-x-1/2 w-3/4 md:w-screen block"
-                            />
-                        </picture> */}
-
-                        <div className="relative w-[calc(100%-24px] m-3 aspect-video shadow-inner rounded-md  overflow-hidden">
+                        <div className="relative w-full m-2 aspect-video shadow object-fill-inner rounded-md overflow-hidden">
                             <Slider data={project.diapo} />
                         </div>
                     </div>
                 </div>
 
+                <div
+                    name="techno"
+                    className="flex flex-row flex-wrap items-center justify-center self-baseline gap-2 w-full m-4 md:m-0 md:w-1/12 md:flex-col md:self-start md:py-3 "
+                >
+                    {project.technos.map((techno, index) => {
+                        return (
+                            <img
+                                className="w-6 h-6 sm:h-10 sm:w-10 lg:h-12 lg:w-12 hover:opacity-80 hover:translate-y-1"
+                                src={`./logos/${techno}.svg`}
+                                key={index}
+                                alt={`logo ${techno}`}
+                            />
+                        )
+                    })}
+                </div>
+
                 <motion.div
                     name="description"
-                    className="col-span-10 row-span-5 sm:row-span-4 md:col-span-4 md:row-span-10 "
+                    className=" w-full m-4 max-h-fit "
                 >
-                    <div className="flex flex-col justify-between gap-5 m-6">
+                    <div className="flex flex-col justify-between gap-5 ">
                         <h3 className="text-xl md:text-2xl bg-transparent text-gray-500">
                             {project.subtitle}
                         </h3>
 
-                        <div className=" flex md:flex-row w-full justify-between  overflow-auto">
-                            <ul className="list-disc md:m-3">
+                        <div className=" flex md:flex-row w-full justify-between overflow-auto">
+                            <ul className="w-full list-disc mx-12 flex flex-wrap">
                                 {project.description?.map(
                                     (paragraph, index) => {
                                         return (
                                             <li
-                                                className=" text-md md:text-1xl"
+                                                className="w-full px-2 lg:w-5/12 text-md md:text-1xl"
                                                 key={index}
                                             >
                                                 {paragraph}
@@ -85,27 +87,12 @@ function ProjectExpanded({ project, handler }) {
                                 )}
                             </ul>
                         </div>
-                        <div
-                            name="techno"
-                            className="flex flex-row flex-wrap items-center self-baseline gap-2"
-                        >
-                            {project.technos.map((techno, index) => {
-                                return (
-                                    <img
-                                        className="h-10 w-10 sm:h-14 sm:w-14 hover:opacity-80 hover:translate-y-1"
-                                        src={`./logos/${techno}.svg`}
-                                        key={index}
-                                        alt={`logo ${techno}`}
-                                    />
-                                )
-                            })}
-                        </div>
                     </div>
                 </motion.div>
 
-                <div
+                <motion.div
                     name="button"
-                    className="col-span-10 row-span-1 sm:row-span-1 md:row-span-2 md:col-span-6  "
+                    className=" w-5/6 lg:w-1/4 m-4 flex flex-wrap items-start lg:self-end"
                 >
                     <div className="flex flex-wrap gap-6 h-full justify-evenly  ">
                         {project.website && (
@@ -116,7 +103,7 @@ function ProjectExpanded({ project, handler }) {
                         )}
                         <RepoButton url={project.repo} />
                     </div>
-                </div>
+                </motion.div>
             </motion.div>
         </motion.article>
     )
