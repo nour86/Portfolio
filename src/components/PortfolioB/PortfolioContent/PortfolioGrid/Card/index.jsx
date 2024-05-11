@@ -3,15 +3,14 @@ import { motion } from 'framer-motion'
 import CardShadow from './CardShadow/index.jsx'
 import CardContent from './CardContent/index.jsx'
 
-function Card({ title, cover, preview, subtitle, id, setProject }) {
+function Card({ title, cover, preview, subtitle, id, openProject }) {
     const [isHovered, setIsHovered] = useState(false)
 
     const handleMouseIn = (e) => {
         setIsHovered((prev) => !prev)
     }
     const handleClick = (e) => {
-        setProject(id)
-        console.log(id)
+        openProject(id)
     }
 
     return (

@@ -60,7 +60,6 @@ const Project = ({ project }) => {
                 className=" absolute w-full h-10 bg-transparent"
                 ref={ref}
             ></div>
-
             <ProjectPreview
                 project={project}
                 expanded={expanded}
@@ -68,6 +67,7 @@ const Project = ({ project }) => {
                 variants={variants}
                 y={y}
             />
+
             <AnimatePresence>
                 {expanded && (
                     <ProjectExpanded project={project} handler={setExpanded} />

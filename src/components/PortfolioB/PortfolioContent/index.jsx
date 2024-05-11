@@ -3,13 +3,7 @@ import PortfolioGrid from './PortfolioGrid'
 import { useState, useRef, useEffect } from 'react'
 import ProjectExpanded from './Expanded'
 
-import {
-    motion,
-    useScroll,
-    useTransform,
-    useInView,
-    AnimatePresence,
-} from 'framer-motion'
+import { useInView, AnimatePresence } from 'framer-motion'
 
 const variants = {
     closed: {
@@ -31,13 +25,24 @@ const variants = {
 }
 
 const PortfolioContent = ({ projects }) => {
-    const [projectId, setProjectId] = useState(false)
+    const [expanded, setExpanded] = useState(false)
+    const [projectId, setProject] = useState(0)
     const ref = useRef()
     const isInView = useInView(ref)
 
     useEffect(() => {
-        setProjectId(false)
+        closeProject()
+        setProject(0)
     }, [isInView])
+
+    function closeProject() {
+        setExpanded(false)
+        setProject(0)
+    }
+    function openProject(id) {
+        setExpanded(true)
+        setProject(id)
+    }
 
     return (
         <>
@@ -45,15 +50,15 @@ const PortfolioContent = ({ projects }) => {
 
             <PortfolioGrid
                 projects={projects}
-                expanded={projectId}
-                setProject={setProjectId}
+                expanded={expanded}
+                openProject={openProject}
                 variants={variants}
             />
 
             <AnimatePresence>
-                {projectId && (
+                {expanded && projectId !== 0 && (
                     <ProjectExpanded
-                        handler={setProjectId}
+                        closeProject={closeProject}
                         project={projects[projectId - 1]}
                     />
                 )}

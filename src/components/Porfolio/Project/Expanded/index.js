@@ -18,7 +18,7 @@ function ProjectExpanded({ project, handler }) {
                 damping: 20,
             }}
             exit={{ opacity: 0, scale: 0, x: '100%' }}
-            className="z-10 absolute flex items-center justify-center self-end w-[100vw] h-5/6 max-h-[1000px] "
+            className="z-10 absolute flex items-center justify-center self-center w-[100vw] h-5/6 max-h-[1000px] "
         >
             <motion.button
                 whileHover={{ scale: 0.9 }}
@@ -31,14 +31,14 @@ function ProjectExpanded({ project, handler }) {
                     alt="fleche retour"
                 ></img>
             </motion.button>
-            <motion.div className="w-full h-full md:w-5/6 max-w-screen-xl grid grid-cols-10 gap-x-3">
+            <motion.div className="w-full md:w-5/6 max-w-screen-xl grid grid-cols-10 gap-x-3">
                 <div
                     name="diapo-grid"
                     className=" col-span-10 row-span-2 md:col-span-6 md:row-span-3 lg:col-span-5 lg:row-span-3 "
                 >
                     <div
                         name="diapo-screen"
-                        className=" flex flex-col h-full items-center relative"
+                        className=" flex flex-col h-full items-center object-cover relative"
                     >
                         <picture>
                             <source

@@ -5,7 +5,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { motion, useScroll, useSpring } from 'framer-motion'
 
 import Project from './Project'
-import ParticlesBackground from '../utils/Particles'
+import SectionTitle from '../Section/SectionTitle'
 
 const Portfolio = () => {
     const [jsonData, setJsonData] = useState(null)
@@ -29,7 +29,7 @@ const Portfolio = () => {
 
     const { scrollYProgress } = useScroll({
         target: ref,
-        offset: ['end end', 'start start'],
+        offset: ['start start', 'end end'],
     })
     const scaleX = useSpring(scrollYProgress, { stiffness: 500, damping: 30 })
 
@@ -40,42 +40,26 @@ const Portfolio = () => {
             id="Portfolio"
         >
             <div
-                className="flex flex-col max-w-6xl items-center justify-center relative w-full p-3 sm:p-10"
+                className="flex flex-col max-w-6xl items-center justify-center relative w-full"
                 ref={ref}
             >
-                <div className="sticky top-0 h-1/6 flex flex-col w-full justify-center z-10">
-                    <div className="absolute w-full h-full">
-                        <ParticlesBackground />
-                    </div>
-                    <div
-                        name="text-container"
-                        className="flex-2 flex self-end text-end justify-end items-center max-w-screen-lg gap-5 my-6 "
-                    >
-                        <h2 className=" font-light text-l sm:text-2xl text-gray-400 right-0">
-                            Mes derniers projets
-                        </h2>
-                        <hr className="w[10vw] sm:w-[30vw]  border-t border-solid border-gray-400" />
-                    </div>
+                <SectionTitle title="Mes derniers projets">
                     <motion.div
                         style={{ scaleX }}
-                        className=" h-1.5 bg-white border-none rounded-full mt-2"
+                        className=" h-1.5 bg-white border-none w-full rounded-full absolute bottom-0 "
                     ></motion.div>
+                </SectionTitle>
+                <div className="flex flex-col max-w-6xl items-center justify-center relative w-full">
+                    {jsonData ? (
+                        jsonData.map((project, index) => {
+                            return (
+                                <Project project={project} key={project.id} />
+                            )
+                        })
+                    ) : (
+                        <p> loading...</p>
+                    )}
                 </div>
-                <div className="w-full h-80 ">
-                    <img
-                        className="object-contain"
-                        src="/background/stars.png"
-                        alt="background stars"
-                    ></img>
-                </div>
-
-                {jsonData ? (
-                    jsonData.map((project, index) => {
-                        return <Project project={project} key={project.id} />
-                    })
-                ) : (
-                    <p> loading...</p>
-                )}
             </div>
         </section>
     )

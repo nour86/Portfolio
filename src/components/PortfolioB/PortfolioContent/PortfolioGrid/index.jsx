@@ -4,7 +4,7 @@ import Card from './Card/index.jsx'
 import MouseTracker from './MouseTracker'
 import { motion } from 'framer-motion'
 
-const PortfolioGrid = ({ projects, setProject, expanded, variants }) => {
+const PortfolioGrid = ({ projects, expanded, openProject, variants }) => {
     const [mouseOver, setMouseOver] = useState(false)
 
     const handleMouseEnter = () => {
@@ -43,7 +43,7 @@ const PortfolioGrid = ({ projects, setProject, expanded, variants }) => {
                             subtitle={project.subtitle}
                             key={project.id}
                             id={project.id}
-                            setProject={setProject}
+                            openProject={openProject}
                         />
                     )
                 })}

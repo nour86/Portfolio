@@ -8,7 +8,7 @@ const TypeWriter = ({ title }) => {
     const ref = useRef()
     const isInView = useInView(ref)
     const name = title
-    const letters = '01'
+    const letters = '01_'
 
     useEffect(() => {
         setTimeout(() => {
@@ -26,7 +26,7 @@ const TypeWriter = ({ title }) => {
                                 return name[index]
                             }
 
-                            return letters[Math.floor(Math.random() * 2)]
+                            return letters[Math.floor(Math.random() * 3)]
                         })
                         .join('')
                     setText(newText)

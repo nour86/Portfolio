@@ -15,7 +15,7 @@ function ProjectPreview({ project, expanded, handler, y, variants }) {
                 damping: 20,
             }}
             exit={{ opacity: 0, x: '-100%' }}
-            className=" flex items-center justify-center self-end w-full h-5/6 bg-red-400"
+            className=" flex items-center justify-center self-end w-full h-5/6 "
         >
             <div className="w-full sm:w-3/4 max-w-screen-lg flex flex-col lg:flex-row items-center justify-center gap-2 lg:gap-8 h-fulloverflow-hidden ">
                 {/* imageContainer */}
@@ -24,7 +24,6 @@ function ProjectPreview({ project, expanded, handler, y, variants }) {
                         src={project.cover}
                         alt={`${project.title} cover`}
                         className="w-full max-w-screen-sm m-auto md: object-cover rounded-xl hover:cursor-pointer"
-                        whileHover={{ scale: 1.02 }}
                         onClick={() => handler(true)}
                     />
                 </div>
@@ -41,9 +40,8 @@ function ProjectPreview({ project, expanded, handler, y, variants }) {
                             <p>{project.preview}</p>
                         </div>
                         <motion.button
-                            className="bg-orange-400 text-black border-none rounded-xl p-3 w-40 sm:w-64  cursor-pointer self-center lg:self-start"
+                            className="bg-white text-black border-none rounded-xl p-3 w-40 sm:w-64  cursor-pointer self-center lg:self-start"
                             onClick={() => handler(true)}
-                            whileHover={{ scale: 0.9 }}
                         >
                             plus d'infos...
                         </motion.button>
