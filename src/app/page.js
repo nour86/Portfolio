@@ -1,8 +1,7 @@
 import Hero from '@/components/Hero'
 import Contact from '@/components/Contact'
 import About from '@/components/About'
-import PortfolioB from '@/components/PortfolioB'
-import TypeWriter from '@/components/utils/Typewriter'
+import Portfolio from '@/components/Portfolio'
 import Sidebar from '@/components/utils/Sidebar'
 
 export default function Page() {
@@ -11,7 +10,7 @@ export default function Page() {
             <Sidebar />
             <Hero />
             <About />
-            <PortfolioB />
+            <Portfolio />
             <Contact />
         </main>
     )

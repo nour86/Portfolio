@@ -3,13 +3,13 @@
 import React, { useState, useEffect, useRef } from 'react'
 
 import { useScroll, useSpring } from 'framer-motion'
-import { MousePositionProvider } from './MouseContext'
+import { MousePositionProvider } from '../utils/MouseContext'
 import PortfolioContent from './PortfolioContent'
 import Section from '../Section'
 import SectionTitle from '../Section/SectionTitle'
 import SectionContent from '../Section/SectionContent'
 
-const PortfolioB = () => {
+const Portfolio = () => {
     const [jsonData, setJsonData] = useState(null)
 
     useEffect(() => {
@@ -51,4 +51,4 @@ const PortfolioB = () => {
     )
 }
 
-export default PortfolioB
+export default Portfolio

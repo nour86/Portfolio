@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { useEffect } from 'react'
-import { useMouseContext } from '../../../MouseContext'
+import { useMouseContext } from '../../../../utils/MouseContext'
 
 const MouseTrackerActivated = () => {
     const { dispatch } = useMouseContext()
