@@ -1,6 +1,6 @@
 # my portfolio build with Nextjs and Tailwind CSS
 
-Visit my portoflio [my portfolio](https://nour-alchami.netlify.app/)
+Visit [my portfolio](https://nour-alchami.netlify.app/)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
