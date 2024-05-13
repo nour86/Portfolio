@@ -101,15 +101,24 @@ const About = () => {
                                     le développement web.
                                 </p>
                                 <p className="my-3">
-                                    J'adore résoudre toute sorte d'énigmes :
-                                    problèmes d'échecs, algorithmie.. mais aussi
-                                    centrage de &#60;div &#47;&#62; ;&#41;
+                                    J'ai suivi la formation certifiante
+                                    intégrateur web d'OpenClassRooms (bac+2) au
+                                    cours de laquelle j'ai acquis de solides
+                                    compétences en HTML, CSS, JavaScript et
+                                    React.
                                 </p>
                                 <p className="my-3">
-                                    Je suis toujours enthousiaste à l'idée
-                                    d'apprendre et suis à l'écoute de nouvelles
-                                    opportunités dans le monde du développement
-                                    web
+                                    Lorsque je ne suis pas devant mon écran à
+                                    potasser des tutos de code ou à tenter de
+                                    résoudre des énigmes sur codewars, j'aime
+                                    jouer aux échecs avec mes potes ou exprimer
+                                    ma créativité en travaillant le bois
+                                    (#low-tech)
+                                </p>
+                                <p className="my-3">
+                                    Toujours enthousiaste à l'idée d'apprendre,
+                                    je suis à l'écoute de nouvelles opportunités
+                                    dans le monde du développement web
                                 </p>
                             </motion.div>
                             <motion.div
