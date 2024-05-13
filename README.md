@@ -1,3 +1,12 @@
+# my portfolio build with Nextjs and Tailwind CSS
+
+Visit [my portfolio](https://nour-alchami.netlify.app/)
+
+## Preview
+![portfoliocover](https://github.com/nour86/portfolio/assets/71932371/6cd81207-43f0-42ca-8056-217f61b7540e)
+![portfoliocover2](https://github.com/nour86/portfolio/assets/71932371/315b1abb-066d-41ba-a0c9-04cb116ee7a9)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
