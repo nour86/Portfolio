@@ -26,9 +26,9 @@
             }
         ],
         "description": [
-            "mobile first",
-            "animations CSS (ouverture, hover, checked)",
-            "réalisation du loader à l'aide des keyframes"
+            "Mobile first",
+            "Animations CSS (ouverture, hover, checked)",
+            "Réalisation du loader à l'aide des keyframes"
         ],
         "repo": "https://github.com/nour86/ohmyfood",
         "website": "https://nour86.github.io/Ohmyfood/"
@@ -95,10 +95,10 @@
             }
         ],
         "description": [
-            "redimensionnement des images",
+            "Redimensionnement des images",
             "optimisation des scripts (lazyload et defer)",
             "Accessibilité optimisée (balises html appropriées, correction du contraste, ajout de descriptions alternatives sur les images et de labels sur les champs du formulaire)",
-            "ajout d'un google rich snippet"
+            "Ajout d'un google rich snippet"
         ],
         "repo": "https://github.com/nour86/nina_carducci",
         "website": "https://nour86.github.io/nina_carducci/"
@@ -118,11 +118,11 @@
             { "title": "picture 4", "img": "./sites/pictures/kasa/kasa4.webp" }
         ],
         "description": [
-            "logique de components React",
-            "utilisation des hooks useState, useEffect, useContext",
+            "Composants React",
+            "Utilisation des hooks useState, useEffect, useContext",
             "Gestion des routes de l'application avec React router",
-            "conditional rendering",
-            "animation css et @mixin pour le responsive design"
+            "Conditional Rendering",
+            "Animation css et @mixin pour le responsive design"
         ],
         "repo": "https://github.com/nour86/Kasa"
     },
@@ -130,7 +130,7 @@
         "id": 5,
         "title": "Argent Bank",
         "cover": "./sites/pictures/argent_bank/argentbankcover.webp",
-        "preview": "implémenter le Front-End d'une application avec React",
+        "preview": "Implémenter le Front-End d'une application avec React",
         "subtitle": "OpenClassRoom projet 11 - Utiliser Redux et connecter l'application à une base NoSql ",
         "technos": ["html5", "css3", "sass", "reactjs", "mongodb"],
         "diapo": [

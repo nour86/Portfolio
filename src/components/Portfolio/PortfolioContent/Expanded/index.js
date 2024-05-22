@@ -18,7 +18,7 @@ function ProjectExpanded({ project, closeProject }) {
                 damping: 20,
             }}
             exit={{ opacity: 0, scale: 0, x: '100%' }}
-            className="z-10 absolute top-0 left-0 snap-start flex flex-col items-center justify-start md:justify-center w-full h-full max-h-[calc(1024px)] overflow-auto   "
+            className="z-10 absolute top-0 left-0 snap-start flex flex-col items-center justify-start md:justify-center w-full h-full max-h-[calc(1024px)] overflow-hidden   "
         >
             <motion.button
                 whileHover={{ scale: 0.9 }}
@@ -31,7 +31,7 @@ function ProjectExpanded({ project, closeProject }) {
                     alt="fleche retour"
                 ></img>
             </motion.button>
-            <motion.div className="w-full md:w-3/4 max-w-screen-xl flex items-center justify-center flex-wrap relative gap-x-3 py-3 ">
+            <motion.div className="w-full md:w-3/4 max-w-screen-xl flex items-center justify-center flex-wrap relative overflow-auto no-scrollbar gap-x-3 py-3 ">
                 <div
                     name="diapo-grid"
                     className=" w-full md:w-3/4 max-w-[calc(840px)] flex items-center justify-center m-2 md:m-6  "

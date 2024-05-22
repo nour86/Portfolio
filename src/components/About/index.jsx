@@ -58,37 +58,38 @@ const About = () => {
             <SectionTitle title="A propos de moi" />
             <SectionContent>
                 <motion.div
-                    className="h-5/6 max-w-7xl flex flex-col items-center justify-between bg-transparent overflow-hidden p-3 sm:p-10 "
+                    className="flex flex-col absolute items-center justify-start overflow-auto max-h-full sm:no-scrollbar bg-transparent p-3 sm:p-10 "
+                    // className="h-5/6 max-w-7xl flex flex-col items-center bg-blue-400 justify-start bg-transparent overflow-auto p-3 sm:p-10 "
                     variants={variants}
                     initial="initial"
                     animate={isInView && 'animate'}
                 >
                     <motion.div
                         name="titleContainer"
-                        className="flex flex-2 flex-col w-full items-center md:items-start "
+                        className="flex flex-1 flex-col w-full items-center md:items-start "
                         variants={variants}
                     >
                         <motion.div className="flex items-start px-5 gap-6 sm:gap-12">
-                            <h1 className=" text-2xl sm:text-4xl text-left sm:text-left font-extralight">
-                                <motion.b
+                            <h1 className=" text-2xl sm:text-4xl text-center sm:text-left font-extralight">
+                                <motion.strong
                                     className="text-4xl sm:text-6xl text-white"
                                     whileHover={{ color: 'orange' }}
                                 >
                                     Développeur web{' '}
-                                </motion.b>
+                                </motion.strong>
                                 junior <br className="hidden sm:flex" />
-                                <motion.b
+                                <motion.strong
                                     className="text-4xl sm:text-6xl text-white"
                                     whileHover={{ color: 'orange' }}
                                 >
                                     Passionné
-                                </motion.b>{' '}
-                                par l'UI/UX desing
+                                </motion.strong>{' '}
+                                par l'UI/UX design
                             </h1>
                         </motion.div>
                     </motion.div>
                     <motion.div
-                        className="flex-2 flex flex-col justify-center items-center max-w-7xl"
+                        className="flex-2 flex flex-col justify-center items-center  max-w-7xl"
                         variants={variants}
                     >
                         <motion.div className="  flex-1 flex flex-col sm:flex-row max-w-6xl justify-between">
