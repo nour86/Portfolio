@@ -10,9 +10,9 @@ const Slider = ({ data }) => {
     useEffect(() => {
         const nextCard = setInterval(() => {
             setIndex(index < pictures.length - 1 ? index + 1 : 0)
-        }, 5000)
+        }, 3000)
         return () => clearInterval(nextCard)
-    })
+    }, [index])
 
     return (
         <>
